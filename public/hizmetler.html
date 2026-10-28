@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İnşaat Hizmet Birimleri & Faaliyet Kataloğu | Masyu Yapı</title>
+    <meta name="description" content="Masyu Yapı 14 ana inşaat disiplini ve 150+ uzmanlık kalemi: Konut, bina, fabrika, endüstriyel tesis, altyapı, saha betonları, enerji santralleri ve kentsel dönüşüm.">
+    <meta name="keywords" content="cebrail kara inşaat, inşaat hizmet birimleri, bina inşaatı, fabrika inşaatı, endüstriyel tesis, altyapı taahhüt, saha betonu, kentsel dönüşüm, data center inşaatı">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Hizmetler Page Specific Styles */
+        .services-hero {
+            padding: 150px 0 60px 0;
+            background: linear-gradient(180deg, rgba(15, 18, 22, 0.92) 0%, rgba(7, 9, 11, 0.98) 100%), 
+                        url('images/hero.png') no-repeat center center/cover;
+            text-align: center;
+            border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+            position: relative;
+        }
+
+        .services-hero .sub-title {
+            color: var(--gold-main);
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .services-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--text-white);
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .services-hero p {
+            max-width: 750px;
+            margin: 0 auto 30px auto;
+            color: var(--text-grey-light);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Search & Filter Bar */
+        .services-search-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .services-search-input {
+            width: 100%;
+            padding: 16px 24px 16px 54px;
+            background: rgba(22, 26, 32, 0.9);
+            border: 1px solid rgba(197, 168, 128, 0.3);
+            border-radius: 50px;
+            color: var(--text-white);
+            font-size: 1rem;
+            font-family: var(--font-body);
+            backdrop-filter: blur(10px);
+            transition: var(--transition-fast);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .services-search-input:focus {
+            outline: none;
+            border-color: var(--gold-main);
+            box-shadow: 0 0 25px rgba(197, 168, 128, 0.35);
+        }
+
+        .services-search-icon {
+            position: absolute;
+            left: 22px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold-main);
+            font-size: 1.2rem;
+        }
+
+        /* Category Navigation Pills */
+        .sectors-nav-container {
+            position: sticky;
+            top: 75px;
+            z-index: 100;
+            background: rgba(7, 9, 11, 0.92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+            padding: 15px 0;
+            margin-bottom: 40px;
+        }
+
+        .sectors-pills {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--gold-dark) var(--primary-dark);
+        }
+
+        .sectors-pills::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .sectors-pills::-webkit-scrollbar-thumb {
+            background: var(--gold-main);
+            border-radius: 4px;
+        }
+
+        .sector-pill-btn {
+            background: rgba(22, 26, 32, 0.8);
+            border: 1px solid rgba(197, 168, 128, 0.2);
+            color: var(--text-grey-light);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition-fast);
+        }
+
+        .sector-pill-btn:hover {
+            background: rgba(197, 168, 128, 0.15);
+            border-color: var(--gold-main);
+            color: var(--gold-main);
+            transform: translateY(-2px);
+        }
+
+        .sector-pill-btn.active {
+            background: linear-gradient(135deg, var(--gold-main), var(--gold-dark));
+            color: var(--primary-dark);
+            border-color: var(--gold-main);
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(197, 168, 128, 0.35);
+        }
+
+        .sector-pill-btn .pill-badge {
+            font-size: 0.7rem;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 2px 7px;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        .sector-pill-btn.active .pill-badge {
+            background: var(--primary-dark);
+            color: var(--gold-main);
+        }
+
+        /* Sector Main Display Card */
+        .sector-detail-card {
+            background: rgba(15, 18, 22, 0.8);
+            border: 1px solid rgba(197, 168, 128, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(12px);
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .sector-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .sector-header-info h2 {
+            font-size: 1.9rem;
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .sector-header-info p {
+            color: var(--text-grey-dark);
+            font-size: 1rem;
+            max-width: 750px;
+            line-height: 1.6;
+        }
+
+        .sector-header-badge {
+            background: rgba(197, 168, 128, 0.12);
+            border: 1px solid var(--gold-main);
+            color: var(--gold-main);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        /* Items Grid */
+        .sector-items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            margin-bottom: 35px;
+        }
+
+        .sector-item-box {
+            background: rgba(22, 26, 32, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: var(--transition-fast);
+            color: var(--text-grey-light);
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
+
+        .sector-item-box:hover {
+            background: rgba(30, 36, 45, 0.9);
+            border-color: rgba(197, 168, 128, 0.35);
+            transform: translateX(4px);
+            color: var(--gold-main);
+        }
+
+        .sector-item-box i.item-check {
+            color: var(--gold-main);
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        /* Sector Action Footer */
+        .sector-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(197, 168, 128, 0.15);
+            padding-top: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn-sector-info {
+            background: transparent;
+            border: 1px solid rgba(197, 168, 128, 0.3);
+            color: var(--gold-main);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition-fast);
+        }
+
+        .btn-sector-info:hover {
+            background: rgba(197, 168, 128, 0.12);
+            border-color: var(--gold-main);
+        }
+
+        .btn-sector-quote {
+            background: linear-gradient(135deg, var(--gold-main), var(--gold-dark));
+            color: var(--primary-dark);
+            border: none;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);
+        }
+
+        .btn-sector-quote:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(197, 168, 128, 0.4);
+            background: linear-gradient(135deg, var(--gold-hover), var(--gold-main));
+        }
+
+        /* Sector Article Modal */
+        .sector-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .sector-modal.active {
+            display: flex;
+        }
+
+        .sector-modal-backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+        }
+
+        .sector-modal-content {
+            position: relative;
+            background: #0f1216;
+            border: 1px solid rgba(197, 168, 128, 0.3);
+            border-radius: 20px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 88vh;
+            overflow-y: auto;
+            padding: 40px;
+            z-index: 10;
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .sector-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-white);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .sector-modal-close:hover {
+            background: var(--gold-main);
+            color: var(--primary-dark);
+        }
+
+        .sector-modal-title {
+            font-size: 1.8rem;
+            color: var(--text-white);
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+            padding-bottom: 15px;
+        }
+
+        .sector-modal-body {
+            color: var(--text-grey-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            white-space: pre-line;
+            margin-bottom: 30px;
+        }
+
+        /* Global Stats Banner */
+        .services-overview-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .s-stat-card {
+            background: rgba(15, 18, 22, 0.7);
+            border: 1px solid rgba(197, 168, 128, 0.15);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: var(--transition-fast);
+        }
+
+        .s-stat-card:hover {
+            border-color: var(--gold-main);
+            transform: translateY(-4px);
+        }
+
+        .s-stat-num {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--gold-main);
+            margin-bottom: 4px;
+        }
+
+        .s-stat-lbl {
+            font-size: 0.85rem;
+            color: var(--text-grey-dark);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 992px) {
+            .services-overview-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-hero h1 {
+                font-size: 2rem;
+            }
+            .services-overview-stats {
+                grid-template-columns: 1fr;
+            }
+            .sector-detail-card {
+                padding: 24px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</span>
+                <span><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</span>
+                <span><i class="fa-solid fa-location-dot"></i> Levent, İstanbul</span>
+            </div>
+            <div class="top-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header scrolled">
+        <div class="container header-container">
+            <a href="/" class="logo" id="logo">
+                <div class="logo-icon">MY</div>
+                <div class="logo-text">
+                    <span class="logo-title">MASYU YAPI</span>
+                    <span class="logo-subtitle">İNŞAAT</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="/" class="nav-link">Ana Sayfa</a></li>
+                    
+                    <li class="nav-item-dropdown">
+                        <a href="/hakkimizda" class="nav-link">Kurumsal <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="/hakkimizda" class="nav-dropdown-link"><i class="fa-solid fa-building-columns"></i> Hakkımızda & Vizyon</a>
+                            <a href="/muhendislik" class="nav-dropdown-link"><i class="fa-solid fa-shield-halved"></i> Mühendislik & Standartlar</a>
+                            <a href="/bolge" class="nav-dropdown-link"><i class="fa-solid fa-map-location-dot"></i> Bölgesel Hizmet Ağı</a>
+                        </div>
+                    </li>
+
+                    <li><a href="/hizmetler" class="nav-link active">Hizmetlerimiz</a></li>
+                    <li><a href="/projeler" class="nav-link">Projelerimiz</a></li>
+                    <li><a href="/emlak-otomotiv" class="nav-link">Emlak & Otomotiv</a></li>
+                    <li><a href="/katkarshesaplama" class="nav-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator" style="margin-right: 4px;"></i> Kat Karşılığı Hesapla</a></li>
+                    <li><a href="/iletisim" class="nav-link">İletişim</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="/iletisim" class="btn btn-gold btn-header">Teklif Al <i class="fa-solid fa-arrow-right"></i></a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menüyü Aç/Kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="/" class="mobile-link">Ana Sayfa</a></li>
+            <li><a href="/hakkimizda" class="mobile-link">Hakkımızda & Kurumsal</a></li>
+            <li><a href="/muhendislik" class="mobile-link">Mühendislik & Kalite</a></li>
+            <li><a href="/hizmetler" class="mobile-link">Hizmet Birimleri</a></li>
+            <li><a href="/projeler" class="mobile-link">Projelerimiz</a></li>
+            <li><a href="/bolge" class="mobile-link">Bölgelerimiz</a></li>
+            <li><a href="/emlak-otomotiv" class="mobile-link">Emlak & Otomotiv</a></li>
+            <li><a href="/katkarshesaplama" class="mobile-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator"></i> Kat Karşılığı Hesaplama</a></li>
+            <li><a href="/iletisim" class="mobile-link">İletişim</a></li>
+        </ul>
+        <div class="mobile-nav-contact">
+            <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+            <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+        </div>
+    </div>
+
+    <!-- Services Hero Banner -->
+    <section class="services-hero">
+        <div class="container">
+            <span class="sub-title">14 ANA DİSİPLİN · 150+ UZMANLIK KALEMİ</span>
+            <h1>İnşaat Hizmet Birimleri & Faaliyet Kataloğumuz</h1>
+            <p>Konut ve rezidans yapılarından ağır sanayi tesislerine, otoyol ve boru hattı altyapısından yüksek teknolojili veri merkezlerine kadar tüm inşaat süreçlerinde A+ kalite standartlarıyla hizmetinizdeyiz.</p>
+            
+            <!-- Quick Filter / Search -->
+            <div class="services-search-wrapper">
+                <i class="fa-solid fa-magnifying-glass services-search-icon"></i>
+                <input type="text" id="serviceSearchInput" class="services-search-input" placeholder="Hizmet birimi veya uzmanlık ara... (Örn: Rezidans, OSB, Data Center, Baraj)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="container sec-padding" style="padding-top: 40px;">
+        
+        <!-- Overview Stats -->
+        <div class="services-overview-stats">
+            <div class="s-stat-card">
+                <div class="s-stat-num">14</div>
+                <div class="s-stat-lbl">Ana İnşaat Disiplini</div>
+            </div>
+            <div class="s-stat-card">
+                <div class="s-stat-num">150+</div>
+                <div class="s-stat-lbl">Uzmanlık & Hizmet Kalemi</div>
+            </div>
+            <div class="s-stat-card">
+                <div class="s-stat-num">%100</div>
+                <div class="s-stat-lbl">Deprem & Statik Uyumu</div>
+            </div>
+            <div class="s-stat-card">
+                <div class="s-stat-num">A+</div>
+                <div class="s-stat-lbl">ISO 9001 Kalite Standardı</div>
+            </div>
+        </div>
+
+        <!-- Sticky Sector Pills Navigation -->
+        <div class="sectors-nav-container">
+            <div class="sectors-pills" id="sectorsPillsContainer">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+
+        <!-- Sector Active Card View -->
+        <div id="activeSectorContainer">
+            <!-- Injected via JS -->
+        </div>
+
+    </main>
+
+    <!-- Sector Detailed Engineering Article Modal -->
+    <div class="sector-modal" id="sectorModal">
+        <div class="sector-modal-backdrop" id="sectorModalBackdrop"></div>
+        <div class="sector-modal-content">
+            <button class="sector-modal-close" id="sectorModalClose" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="sector-modal-title" id="modalSectorTitle">Disiplin Başlığı</h3>
+            <div class="sector-modal-body" id="modalSectorBody">
+                <!-- Text Injected via JS -->
+            </div>
+            <div style="display: flex; gap: 15px; justify-content: flex-end;">
+                <button class="btn btn-outline-white" id="modalCloseBtn">Kapat</button>
+                <a href="#iletisim" class="btn btn-gold" id="modalQuoteBtn">Bu Hizmet İçin Teklif Al <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">
+                    <div class="logo-icon">MY</div>
+                    <div class="logo-text">
+                        <span class="logo-title">MASYU YAPI</span>
+                        <span class="logo-subtitle">İNŞAAT</span>
+                    </div>
+                </a>
+                <p class="brand-desc">Türkiye'nin elit mimari değerlerini ve sağlam mühendislik çözümlerini bir araya getirerek, kalıcı ve prestijli eserler inşa eden öncü inşaat markası.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col links-col">
+                <h3>Hızlı Erişim</h3>
+                <ul>
+                    <li><a href="/"><i class="fa-solid fa-chevron-right"></i> Ana Sayfa</a></li>
+                    <li><a href="/#hakkimizda"><i class="fa-solid fa-chevron-right"></i> Hakkımızda</a></li>
+                    <li><a href="/hizmetler"><i class="fa-solid fa-chevron-right"></i> Hizmet Birimleri</a></li>
+                    <li><a href="/#projeler"><i class="fa-solid fa-chevron-right"></i> Projelerimiz</a></li>
+                    <li><a href="/katkarshesaplama"><i class="fa-solid fa-chevron-right"></i> Kat Karşılığı Hesaplama</a></li>
+                    <li><a href="/#kalite"><i class="fa-solid fa-chevron-right"></i> Mühendislik</a></li>
+                    <li><a href="/#iletisim"><i class="fa-solid fa-chevron-right"></i> İletişim</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col links-col">
+                <h3>Faaliyetlerimiz</h3>
+                <ul>
+                    <li><a href="/hizmetler"><i class="fa-solid fa-chevron-right"></i> Lüks Rezidans İnşaatı</a></li>
+                    <li><a href="/hizmetler"><i class="fa-solid fa-chevron-right"></i> Endüstriyel Tesis & OSB</a></li>
+                    <li><a href="/hizmetler"><i class="fa-solid fa-chevron-right"></i> Altyapı & Boru Hatları</a></li>
+                    <li><a href="/hizmetler"><i class="fa-solid fa-chevron-right"></i> Helikopterli Saha Betonları</a></li>
+                    <li><a href="/hizmetler"><i class="fa-solid fa-chevron-right"></i> Kentsel Dönüşüm</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col newsletter-col">
+                <h3>E-Bülten Üyeliği</h3>
+                <p>Yeni projelerimizden, lansman öncesi avantajlı fiyatlardan ve duyurulardan ilk siz haberdar olun.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="E-posta adresiniz..." required id="newsletter-email">
+                    <button type="submit" aria-label="Kayıt Ol"><i class="fa-regular fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p class="copyright">&copy; 2026 Masyu Yapı. Tüm Hakları Saklıdır.</p>
+                <div class="bottom-links">
+                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#">Kullanım Şartları</a>
+                    <a href="#">KVKK Aydınlatma Metni</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Widget -->
+    <div class="whatsapp-widget" id="whatsapp-widget">
+        <div class="whatsapp-bubble" id="whatsapp-bubble">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="whatsapp-badge">1</span>
+        </div>
+        <div class="whatsapp-chat-box" id="whatsapp-chat-box">
+            <div class="chat-header">
+                <div class="chat-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="chat-header-info">
+                    <h4>Masyu Yapı Satış Temsilcisi</h4>
+                    <span><span class="dot-online"></span> Çevrimiçi</span>
+                </div>
+                <button class="chat-close" id="chat-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-body">
+                <div class="chat-msg received">
+                    <p>Merhaba! Masyu Yapı Hizmet Birimleri hakkında detaylı bilgi ve teklif almak için bize ulaşabilirsiniz. Nasıl yardımcı olabilirim? 😊</p>
+                    <span class="msg-time">Şimdi</span>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <a href="https://wa.me/905320550945?text=Merhaba,%20Cebrail%20Kara%20İnşaat%20hizmet%20birimleri%20hakkında%20teklif%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-send">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp ile Bağlan
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Yukarı Kaydır">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Services Catalog Engine Script -->
+    <script>
+        const SECTORS_DATA = [
+            {
+                id: 'bina',
+                title: '🏢 Bina & Konut İnşaatları',
+                count: '27 Kalem',
+                icon: 'fa-solid fa-building',
+                shortDesc: 'Rezidans, toplu konut, kamu hizmet binaları, otel, hastane ve iş merkezleri için anahtar teslim üst ve altyapı inşaat çözümleri.',
+                detailedText: `Masyu Yapı olarak, konut projelerinden gökdelen ve rezidans inşaatlarına, kamu hizmet binalarından hastane ve okul komplekslerine kadar geniş bir yelpazede yüksek standartlı yapı çözümleri sunuyoruz. Zemin etüdünden başlayarak temel kazısı, betonarme ve çelik karkas yapımı, cephe kaplama ve ince işçilik süreçlerini ISO 9001 ve ISO 45001 iş güvenliği normlarına tam uyumla yönetiyoruz.\n\nSaha mühendislerimiz ve uzman kadromuz ile temel altı dolguları, kazık başı kırma, bohçalama su yalıtımı ve çevre düzenleme dâhil tüm mühendislik disiplinlerinde sıfır hata prensibiyle çalışmaktayız.`,
+                items: [
+                    'Konut İnşaatları', 'Villa İnşaatları', 'Apartman İnşaatları', 'Site İnşaatları',
+                    'Rezidans İnşaatları', 'Toplu Konut İnşaatları', 'Ofis Binaları', 'İş Merkezi İnşaatları',
+                    'Plaza İnşaatları', 'AVM (Alışveriş Merkezi) İnşaatları', 'Otel İnşaatları', 'Hastane İnşaatları',
+                    'Sağlık Merkezi İnşaatları', 'Okul İnşaatları', 'Üniversite Kampüsü İnşaatları', 'Kreş ve Anaokulu İnşaatları',
+                    'Yurt İnşaatları', 'Spor Salonu İnşaatları', 'Stadyum İnşaatları', 'Kültür Merkezi İnşaatları',
+                    'Kongre Merkezi İnşaatları', 'Cami & Dini Yapı İnşaatları', 'Kamu Hizmet Binaları', 'Adliye Binaları',
+                    'Belediye Hizmet Binaları', 'Cezaevi & İtfaiye Binaları', 'Emniyet Binaları'
+                ]
+            },
+            {
+                id: 'endustriyel',
+                title: '🏭 Endüstriyel İnşaatlar & Tesisler',
+                count: '17 Kalem',
+                icon: 'fa-solid fa-industry',
+                shortDesc: 'OSB fabrika yapıları, ağır sanayi tesisleri, soğuk hava depoları, antrepo ve üretim hangarları için çelik & betonarme entegre çözümler.',
+                detailedText: `Endüstriyel tesis projelendirme ve yapımında zaman, yüksek mukavemet ve zemin taşıma kapasitesi kritik önem taşır. Organize Sanayi Bölgeleri (OSB) bünyesindeki fabrikalar, çimento ve kimya tesisleri, lojistik antrepolar ve soğuk hava depoları için ağır yük taşıma kapasitesine sahip özel temel ve üstyapı çözümleri üretiyoruz.\n\nYüksek tavanlı çelik konstrüksiyon montajlarında geniş makas ve kolon imalatları hassasiyetle yürütülür. Zemin vibrasyonunu önleyen aksiyel sönümleme betonları dökülerek ağır makine kurulumlarına uygun altyapı hazırlanır.`,
+                items: [
+                    'Fabrika İnşaatları', 'Üretim Tesisi İnşaatları', 'Organize Sanayi (OSB) Tesisleri', 'Depo İnşaatları',
+                    'Antrepo İnşaatları', 'Lojistik Merkezleri', 'Soğuk Hava Deposu İnşaatları', 'Atölye İnşaatları',
+                    'Hangar İnşaatları', 'Rafineri İnşaatları', 'Çimento Fabrikaları', 'Demir-Çelik Tesisleri',
+                    'Kimya Tesisleri', 'Gıda Üretim Tesisleri', 'İlaç Üretim Tesisleri', 'Enerji Santrali İnşaatları', 'Ağır Sanayi Tesisleri'
+                ]
+            },
+            {
+                id: 'altyapi',
+                title: '🚧 Altyapı & Boru Hatları',
+                count: '18 Kalem',
+                icon: 'fa-solid fa-road',
+                shortDesc: 'Otoyol, demiryolu, tünel, viyadük, içme suyu, doğalgaz ve petrol boru hatları için kesintisiz kazı ve altyapı mühendisliği.',
+                detailedText: `Altyapı projeleri modern şehirciliğin omurgasını oluşturur. Şehir içi ve şehirlerarası yollar, metro ve hızlı tren altyapıları, petrol ve doğalgaz boru hatları ile kanalizasyon/drenaj şebekelerinde yüksek mühendislik tecrübemizle hizmet veriyoruz.\n\nLazer terazili kazı teknolojileri sayesinde boru yatağı kumlama ve meyil kazıları milimetrik hassasiyetle tamamlanır. Taş dolgulu drenaj kanalları ve bypass hatları ile altyapı ömrü maksimuma çıkarılır.`,
+                items: [
+                    'Yol & Otoyol İnşaatları', 'Köprü & Viyadük İnşaatları', 'Tünel İnşaatları', 'Demiryolu & Metro İnşaatları',
+                    'Tramvay Hatları', 'Hızlı Tren Altyapısı', 'Havalimanı & Pist İnşaatları', 'Liman & Marina İnşaatları',
+                    'Baraj & Gölet İnşaatları', 'Sulama Kanalları', 'İçme Suyu Hatları', 'Kanalizasyon Hatları',
+                    'Yağmur Suyu Drenaj Sistemleri', 'Doğalgaz Hatları', 'Petrol Boru Hatları', 'Elektrik İletim Hatları',
+                    'Telekomünikasyon Altyapısı', 'Fiber Optik Altyapısı'
+                ]
+            },
+            {
+                id: 'saha-beton',
+                title: '🏗️ Saha Betonları & Zemin',
+                count: '12 Kalem',
+                icon: 'fa-solid fa-cubes-stacked',
+                shortDesc: 'Lazer perdahlı helikopterli endüstriyel saha betonları, ağır yük otopark betonları, beton apronlar ve yüzey sertleştiricili zemin kaplamaları.',
+                detailedText: `Fabrika içi, depo yükleme alanları ve konteyner sahaları sürekli tonajlı araç trafiğine maruz kalır. Bu alanlarda çatlama ve tozumayı önleyen özel lif takviyeli, kuars/korund yüzey sertleştiricili ve lazer perdahlı helikopter şapı uygulamaları gerçekleştiriyoruz.\n\nZemin önce stabilize malzeme ile sıkıştırılır, ardından çelik hasır çekilerek trans mikser ve beton pompaları ile C30/C35 sınıfı hazır beton dökülür. İki yönlü lazer nivoyla sıfır kod sapması sağlandıktan sonra derz kesimi ve poliüretan mastik dolgusu tamamlanır.`,
+                items: [
+                    'Fabrika Saha Betonları', 'Endüstriyel Zemin Betonları', 'Otopark Betonları', 'Depo Saha Betonları',
+                    'Ağır Yük Betonları', 'Helikopter Perdahlı Betonlar', 'Baskı Beton Uygulamaları', 'Beton Yollar',
+                    'Beton Apronlar', 'Yükleme Alanı Betonları', 'Konteyner Saha Betonları', 'Stabilize Zemin Dolgusu'
+                ]
+            },
+            {
+                id: 'ustyapi',
+                title: '🏬 Üstyapı & Taşıyıcı Sistemler',
+                count: '6 Kalem',
+                icon: 'fa-solid fa-layer-group',
+                shortDesc: 'Betonarme, endüstriyel çelik konstrüksiyon, prefabrik ve hafif çelik taşıyıcı sistem imalat ve montajı.',
+                detailedText: `Deprem yönetmeliğine %100 uyumlu, yüksek mukavemetli taşıyıcı üstyapı sistemleri inşa ediyoruz. Çelik konstrüksiyon yapılarda geniş açıklıklı makas ve kolon montajları güvenle yürütülür. Prefabrik beton elemanların sahada montajı ve birleşim detayları uluslararası statik normlara uygun yapılır.`,
+                items: [
+                    'Betonarme Yapılar', 'Çelik Yapılar', 'Prefabrik Yapılar', 'Ahşap Yapılar',
+                    'Karma (Hibrit) Yapılar', 'Hafif Çelik Yapılar'
+                ]
+            },
+            {
+                id: 'enerji',
+                title: '⚡ Enerji Yapıları & Santraller',
+                count: '8 Kalem',
+                icon: 'fa-solid fa-bolt',
+                shortDesc: 'GES, RES, HES, trafo merkezleri ve enerji depolama sahaları için hafriyat, zemin düzenleme ve beton altyapı.',
+                detailedText: `Güneş Enerji Santrallerinde (GES) çakma kazık yatakları ve saha tesviyesi, Rüzgar Enerji Santrallerinde (RES) ise yüksek tonajlı türbin kanat ve kule montajı için ağır beton temel ayakları hazırlarız. Ağır trafo ve enerji depolama alanları için yüksek mukavemetli izolasyon betonları dökülmektedir.`,
+                items: [
+                    'Hidroelektrik Santraller (HES)', 'Termik Santraller', 'Doğalgaz Çevrim Santralleri',
+                    'Güneş Enerji Santralleri (GES)', 'Rüzgar Enerji Santralleri (RES)', 'Biyogaz Tesisleri',
+                    'Trafo Merkezleri', 'Enerji Depolama Tesisleri'
+                ]
+            },
+            {
+                id: 'su',
+                title: '💧 Su Yapıları & Arıtma',
+                count: '8 Kalem',
+                icon: 'fa-solid fa-droplet',
+                shortDesc: 'Baraj gövde dolguları, arıtma tesisleri, su depoları, terfi merkezleri ve taşkın koruma tahkimatları.',
+                detailedText: `Su kaynaklarının korunması ve iletimi için su geçirimsiz yüksek performanslı betonarme havuzlar, çökeltim tankları ve isale hatları inşa ediyoruz. Dere ıslahı ve taşkın koruma projelerinde sert taş dolguları yapılarak kıyı koruma duvarları oluşturulmaktadır.`,
+                items: [
+                    'Barajlar & Göletler', 'Su Depoları', 'Arıtma Tesisleri', 'Atık Su Arıtma Tesisleri',
+                    'Terfi Merkezleri', 'İsale Hatları', 'Taşkın Koruma Yapıları', 'Kıyı Tahkimatları'
+                ]
+            },
+            {
+                id: 'ulasim',
+                title: '🚄 Ulaşım & Karayolları',
+                count: '8 Kalem',
+                icon: 'fa-solid fa-train-subway',
+                shortDesc: 'Karayolu, viyadük, havalimanı pistleri, liman iskeleleri ve metro istasyonları altyapı ve üstyapı imalatı.',
+                detailedText: `Liman yanaşma iskeleleri, ağır yük apronları ve otoban bağlantı viyadüklerinde yüksek tonajlı makinelerimizle dekapaj ve dolgu yürütülür. Havalimanı pistlerinde özel beton kaplama zemin iyileştirmeleri yapılır.`,
+                items: [
+                    'Karayolları & Demiryolları', 'Köprüler & Viyadükler', 'Tüneller', 'Havalimanları',
+                    'Limanlar & İskeleler', 'Metro İstasyonları', 'Otobüs Terminalleri', 'Hızlı Tren Altyapıları'
+                ]
+            },
+            {
+                id: 'ticari',
+                title: '🏢 Ticari Yapılar & Showroom',
+                count: '8 Kalem',
+                icon: 'fa-solid fa-shop',
+                shortDesc: 'AVM, plaza, araç showroomları, zincir marketler ve akaryakıt istasyonları için modern ticari mimari.',
+                detailedText: `Ticari yapılarda estetik, fonksiyonellik ve hızlı teslimat ön plandadır. Akaryakıt istasyonu kanopi ve tonoz kazılarından AVM derin bodrum zemin iksa sistemlerine kadar tüm ticari altyapıları tamamlamaktayız.`,
+                items: [
+                    'AVM\'ler & İş Merkezleri', 'Ofis Binaları', 'Showroomlar', 'Marketler',
+                    'Zincir Mağazalar', 'Banka Şubeleri', 'Akaryakıt İstasyonları', 'Plazalar'
+                ]
+            },
+            {
+                id: 'turizm',
+                title: '🏖️ Turizm & Konaklama Yapıları',
+                count: '7 Kalem',
+                icon: 'fa-solid fa-umbrella-beach',
+                shortDesc: '5 yıldızlı oteller, tatil köyleri, marinaya entegre tesisler ve doğayla uyumlu ahşap/bungalov yapılar.',
+                detailedText: `Turizm yapılarında peyzajla entegre, falez ve kıyı yapısına zarar vermeyen hassas kazı teknikleri uygulanır. Yüzme havuzları, termal kaplıca betonarme depoları ve otel kompleksleri anahtar teslim tamamlanır.`,
+                items: [
+                    'Oteller & Tatil Köyleri', 'Butik Oteller', 'Termal Tesisler', 'Kamp Alanları',
+                    'Bungalov Tesisleri', 'Marina Tesisleri', 'Sosyal Tesisler'
+                ]
+            },
+            {
+                id: 'tarim',
+                title: '🌾 Tarım & Hayvancılık Yapıları',
+                count: '8 Kalem',
+                icon: 'fa-solid fa-wheat-awn',
+                shortDesc: 'Modern sera kurulumları, yüksek kapasiteli besi çiftlikleri, silolar ve tarımsal depo betonları.',
+                detailedText: `Büyükbaş ve küçükbaş hayvan tesislerinde hijyenik yıkanabilir şap zeminler, silo temelleri ve otomatik havalandırmalı ahır/kümes karkasları inşa edilmektedir.`,
+                items: [
+                    'Sera İnşaatları', 'Ahırlar & Besi Çiftlikleri', 'Kümesler', 'Süt Üretim Tesisleri',
+                    'Tarım Depoları', 'Silolar', 'Sulama Tesisleri', 'Soğuk Hava Depoları'
+                ]
+            },
+            {
+                id: 'cevre',
+                title: '🌳 Çevre & Peyzaj Yapıları',
+                count: '8 Kalem',
+                icon: 'fa-solid fa-tree',
+                shortDesc: 'Millet bahçeleri, rekreasyon alanları, kentsel parklar, tartan pist yürüyüş ve bisiklet yolları.',
+                detailedText: `Şehirlerin nefes almasını sağlayan kent parkları ve rekreasyon alanlarında bitkisel toprak serme, drenaj kanalları ve kilit taşı/baskı beton yürüyüş yolları yapılmaktadır.`,
+                items: [
+                    'Parklar & Millet Bahçeleri', 'Rekreasyon Alanları', 'Peyzaj Düzenlemeleri',
+                    'Çocuk Oyun Alanları', 'Spor Sahaları', 'Yürüyüş Yolları', 'Bisiklet Yolları', 'Açık Spor Tesisleri'
+                ]
+            },
+            {
+                id: 'kentsel',
+                title: '🛠️ Kentsel Dönüşüm & Restorasyon',
+                count: '6 Kalem',
+                icon: 'fa-solid fa-screwdriver-wrench',
+                shortDesc: 'Riskli bina yıkımı, karbon elyaf ve çelik mantolama ile bina güçlendirme, tarihi eser restorasyonu.',
+                detailedText: `Kentsel dönüşüm alanlarında bitişik nizam riskli yapıların sulu tozsuz kırıcı ekskavatörlerle çevreye zarar vermeden yıkılması, hafriyatın döküm sahasına taşınması ve mevcut sağlam yapılarda karbon elyaf/mantolama güçlendirmeleri yapılmaktadır.`,
+                items: [
+                    'Kentsel Dönüşüm Projeleri', 'Bina Güçlendirme Çalışmaları', 'Restorasyon Projeleri',
+                    'Renovasyon Projeleri', 'Tarihi Eser Restorasyonları', 'Cephe Yenileme Uygulamaları'
+                ]
+            },
+            {
+                id: 'ozel',
+                title: '🔒 Özel Yapılar & Data Center',
+                count: '8 Kalem',
+                icon: 'fa-solid fa-server',
+                shortDesc: 'TIER-3/TIER-4 standartlarında Data Center veri merkezleri, savunma sanayi sığınak ve Ar-Ge tesisleri.',
+                detailedText: `Yüksek güvenlikli Data Center projelerinde EMI/RFI elektromanyetik zırhlama betonları, iklimlendirme kanalları ve kesintisiz güç jeneratör temelleri TIER standartlarında inşa edilir.`,
+                items: [
+                    'Veri Merkezi (Data Center) İnşaatları', 'Laboratuvar Binaları', 'Ar-Ge Merkezleri',
+                    'Askeri Tesisler', 'Savunma Sanayi Tesisleri', 'Ceza İnfaz Kurumları', 'Afet ve Acil Durum Merkezleri', 'Lojistik Üsler'
+                ]
+            }
+        ];
+
+        let activeSectorId = 'bina';
+
+        // Render Pills
+        const pillsContainer = document.getElementById('sectorsPillsContainer');
+        const activeContainer = document.getElementById('activeSectorContainer');
+
+        function renderPills() {
+            pillsContainer.innerHTML = '';
+            SECTORS_DATA.forEach(sec => {
+                const btn = document.createElement('button');
+                btn.className = `sector-pill-btn ${sec.id === activeSectorId ? 'active' : ''}`;
+                btn.innerHTML = `
+                    <i class="${sec.icon}"></i>
+                    <span>${sec.title.replace(/^[^\s]+\s/, '')}</span>
+                    <span class="pill-badge">${sec.count}</span>
+                `;
+                btn.addEventListener('click', () => {
+                    activeSectorId = sec.id;
+                    renderPills();
+                    renderActiveSector();
+                    // Scroll active pill into view smoothly
+                    btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                });
+                pillsContainer.appendChild(btn);
+            });
+        }
+
+        function renderActiveSector() {
+            const sec = SECTORS_DATA.find(s => s.id === activeSectorId) || SECTORS_DATA[0];
+            if (!sec) return;
+
+            let itemsHTML = '';
+            sec.items.forEach(item => {
+                itemsHTML += `
+                    <div class="sector-item-box">
+                        <i class="fa-solid fa-circle-check item-check"></i>
+                        <span>${item}</span>
+                    </div>
+                `;
+            });
+
+            activeContainer.innerHTML = `
+                <div class="sector-detail-card">
+                    <div class="sector-header">
+                        <div class="sector-header-info">
+                            <h2><i class="${sec.icon}" style="color: var(--gold-main);"></i> ${sec.title}</h2>
+                            <p>${sec.shortDesc}</p>
+                        </div>
+                        <div class="sector-header-badge">
+                            <i class="fa-solid fa-list-check"></i> ${sec.count}
+                        </div>
+                    </div>
+
+                    <div class="sector-items-grid">
+                        ${itemsHTML}
+                    </div>
+
+                    <div class="sector-footer">
+                        <button class="btn-sector-info" onclick="openSectorModal('${sec.id}')">
+                            <i class="fa-solid fa-file-lines"></i> Detaylı Mühendislik Raporunu Oku
+                        </button>
+                        <a href="https://wa.me/905320550945?text=Merhaba,%20Cebrail%20Kara%20İnşaat%20${encodeURIComponent(sec.title)}%20faaliyetleri%20için%20teklif%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="btn-sector-quote">
+                            <i class="fa-brands fa-whatsapp"></i> Doğrudan Teklif Al
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Modal Functionality
+        const sectorModal = document.getElementById('sectorModal');
+        const modalSectorTitle = document.getElementById('modalSectorTitle');
+        const modalSectorBody = document.getElementById('modalSectorBody');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        const sectorModalClose = document.getElementById('sectorModalClose');
+        const sectorModalBackdrop = document.getElementById('sectorModalBackdrop');
+        const modalQuoteBtn = document.getElementById('modalQuoteBtn');
+
+        window.openSectorModal = function(sectorId) {
+            const sec = SECTORS_DATA.find(s => s.id === sectorId);
+            if (!sec) return;
+
+            modalSectorTitle.innerHTML = `<i class="${sec.icon}" style="color: var(--gold-main); margin-right: 10px;"></i> ${sec.title}`;
+            modalSectorBody.textContent = sec.detailedText;
+            modalQuoteBtn.href = `https://wa.me/905320550945?text=Merhaba,%20Cebrail%20Kara%20İnşaat%20${encodeURIComponent(sec.title)}%20kapsamında%20detaylı%20proje%20teklifi%20almak%20istiyorum.`;
+            
+            sectorModal.classList.add('active');
+            document.body.classList.add('overflow-hidden');
+        };
+
+        function closeSectorModal() {
+            sectorModal.classList.remove('active');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        modalCloseBtn.addEventListener('click', closeSectorModal);
+        sectorModalClose.addEventListener('click', closeSectorModal);
+        sectorModalBackdrop.addEventListener('click', closeSectorModal);
+
+        // Search Input Filter Functionality
+        const searchInput = document.getElementById('serviceSearchInput');
+        searchInput.addEventListener('input', (e) => {
+            const q = e.target.value.toLowerCase().trim();
+            if (!q) {
+                renderActiveSector();
+                document.querySelector('.sectors-nav-container').style.display = 'block';
+                return;
+            }
+
+            // Find matching sector or items
+            let matches = [];
+            SECTORS_DATA.forEach(sec => {
+                const matchedItems = sec.items.filter(it => it.toLowerCase().includes(q));
+                const matchesSector = sec.title.toLowerCase().includes(q) || sec.shortDesc.toLowerCase().includes(q);
+                if (matchesSector || matchedItems.length > 0) {
+                    matches.push({
+                        ...sec,
+                        displayItems: matchedItems.length > 0 ? matchedItems : sec.items
+                    });
+                }
+            });
+
+            if (matches.length === 0) {
+                activeContainer.innerHTML = `
+                    <div class="sector-detail-card" style="text-align: center; padding: 60px 20px;">
+                        <i class="fa-solid fa-magnifying-glass" style="font-size: 3rem; color: var(--gold-dark); margin-bottom: 20px;"></i>
+                        <h3 style="color: var(--text-white); margin-bottom: 10px;">Sonuç Bulunamadı</h3>
+                        <p style="color: var(--text-grey-dark);">"${e.target.value}" ile eşleşen bir inşaat hizmet kalemi bulunamadı. Lütfen farklı bir arama terimi deneyin.</p>
+                    </div>
+                `;
+            } else {
+                let html = '';
+                matches.forEach(sec => {
+                    let itemsHTML = '';
+                    sec.displayItems.forEach(item => {
+                        itemsHTML += `
+                            <div class="sector-item-box">
+                                <i class="fa-solid fa-circle-check item-check"></i>
+                                <span>${item}</span>
+                            </div>
+                        `;
+                    });
+
+                    html += `
+                        <div class="sector-detail-card" style="margin-bottom: 30px;">
+                            <div class="sector-header">
+                                <div class="sector-header-info">
+                                    <h2><i class="${sec.icon}" style="color: var(--gold-main);"></i> ${sec.title}</h2>
+                                    <p>${sec.shortDesc}</p>
+                                </div>
+                                <div class="sector-header-badge">
+                                    ${sec.displayItems.length} Eşleşen Kalem
+                                </div>
+                            </div>
+                            <div class="sector-items-grid">
+                                ${itemsHTML}
+                            </div>
+                            <div class="sector-footer">
+                                <button class="btn-sector-info" onclick="openSectorModal('${sec.id}')">
+                                    <i class="fa-solid fa-file-lines"></i> Detaylı Mühendislik Raporu
+                                </button>
+                                <a href="https://wa.me/905320550945?text=Merhaba,%20${encodeURIComponent(sec.title)}%20hakkında%20teklif%20almak%20istiyorum." target="_blank" class="btn-sector-quote">
+                                    <i class="fa-brands fa-whatsapp"></i> Teklif Al
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                });
+                activeContainer.innerHTML = html;
+            }
+        });
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPills();
+            renderActiveSector();
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

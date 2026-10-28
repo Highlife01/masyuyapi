@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerimiz & Prestijli Portföyümüz | Masyu Yapı</title>
+    <meta name="description" content="Masyu Yapı tamamlanan ve devam eden lüks rezidans, villa, kentsel dönüşüm ve ticari plaza projeleri. Adana, Mersin, Osmaniye ve Hatay genelinde kaliteli yaşam alanları.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .page-hero {
+            padding: 160px 0 80px 0;
+            background: radial-gradient(circle at 50% 20%, rgba(197, 168, 128, 0.18) 0%, rgba(15, 18, 23, 0.96) 75%),
+                        linear-gradient(180deg, rgba(7, 9, 11, 0.92) 0%, #0f1217 100%),
+                        url('images/hero.png') center/cover no-repeat;
+            background-blend-mode: overlay;
+            border-bottom: 1px solid var(--border-gold);
+            text-align: center;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 35px 0;
+            flex-wrap: wrap;
+        }
+
+        .btn-filter {
+            padding: 12px 28px;
+            border-radius: 30px;
+            background: rgba(19, 23, 31, 0.8);
+            border: 1px solid rgba(197, 168, 128, 0.3);
+            color: var(--text-grey-light);
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .btn-filter:hover {
+            border-color: var(--gold-main);
+            color: var(--gold-main);
+            transform: translateY(-2px);
+        }
+
+        .btn-filter.active {
+            background: linear-gradient(135deg, var(--gold-main), var(--gold-dark));
+            color: var(--primary-dark);
+            border-color: var(--gold-main);
+            box-shadow: 0 4px 20px rgba(197, 168, 128, 0.4);
+        }
+
+        .project-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(7, 9, 11, 0.92);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .project-modal.active { display: flex; }
+
+        .project-modal-card {
+            background: #13171f;
+            border: 1px solid var(--gold-main);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            padding: 35px;
+            box-shadow: var(--shadow-luxury);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</span>
+                <span><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</span>
+                <span><i class="fa-solid fa-location-dot"></i> Çukurova & Doğu Akdeniz Bölgesi</span>
+            </div>
+            <div class="top-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header scrolled">
+        <div class="container header-container">
+            <a href="/" class="logo" id="logo">
+                <div class="logo-icon">MY</div>
+                <div class="logo-text">
+                    <span class="logo-title">MASYU YAPI</span>
+                    <span class="logo-subtitle">İNŞAAT</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="/" class="nav-link">Ana Sayfa</a></li>
+                    
+                    <li class="nav-item-dropdown">
+                        <a href="/hakkimizda" class="nav-link">Kurumsal <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="/hakkimizda" class="nav-dropdown-link"><i class="fa-solid fa-building-columns"></i> Hakkımızda & Vizyon</a>
+                            <a href="/muhendislik" class="nav-dropdown-link"><i class="fa-solid fa-shield-halved"></i> Mühendislik & Standartlar</a>
+                            <a href="/bolge" class="nav-dropdown-link"><i class="fa-solid fa-map-location-dot"></i> Bölgesel Hizmet Ağı</a>
+                        </div>
+                    </li>
+
+                    <li><a href="/hizmetler" class="nav-link">Hizmetlerimiz</a></li>
+                    <li><a href="/projeler" class="nav-link active">Projelerimiz</a></li>
+                    <li><a href="/emlak-otomotiv" class="nav-link">Emlak & Otomotiv</a></li>
+                    <li><a href="/katkarshesaplama" class="nav-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator" style="margin-right: 4px;"></i> Kat Karşılığı Hesapla</a></li>
+                    <li><a href="/iletisim" class="nav-link">İletişim</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="/iletisim" class="btn btn-gold btn-header">Teklif Al <i class="fa-solid fa-arrow-right"></i></a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menüyü Aç/Kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="/" class="mobile-link">Ana Sayfa</a></li>
+            <li><a href="/hakkimizda" class="mobile-link">Hakkımızda & Kurumsal</a></li>
+            <li><a href="/muhendislik" class="mobile-link">Mühendislik & Kalite</a></li>
+            <li><a href="/hizmetler" class="mobile-link">Hizmet Birimleri</a></li>
+            <li><a href="/projeler" class="mobile-link">Projelerimiz</a></li>
+            <li><a href="/bolge" class="mobile-link">Bölgelerimiz</a></li>
+            <li><a href="/emlak-otomotiv" class="mobile-link">Emlak & Otomotiv</a></li>
+            <li><a href="/katkarshesaplama" class="mobile-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator"></i> Kat Karşılığı Hesaplama</a></li>
+            <li><a href="/iletisim" class="mobile-link">İletişim</a></li>
+        </ul>
+        <div class="mobile-nav-contact">
+            <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+            <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+        </div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="sub-title">PRESTİJLİ PORTFÖYÜMÜZ</span>
+            <h1 style="font-size: 3.2rem; font-weight: 800; color: var(--text-white); margin-top: 10px;">
+                Geleceğe Bıraktığımız <span class="text-gold">İmzalar</span>
+            </h1>
+            <p style="color: var(--text-grey-light); font-size: 1.1rem; max-width: 750px; margin: 15px auto 0 auto; line-height: 1.8;">
+                Adana, Mersin, Osmaniye ve Hatay'da hayata geçirdiğimiz lüks rezidanslar, kentsel dönüşüm projeleri, butik sahil villaları ve modern ticari plazalarımız.
+            </p>
+
+            <div class="filter-buttons">
+                <button class="btn-filter active" onclick="filterProjects('all', this)">Tüm Projeler</button>
+                <button class="btn-filter" onclick="filterProjects('konut', this)">Rezidans & Konut</button>
+                <button class="btn-filter" onclick="filterProjects('villa', this)">Lüks Villa & Malikane</button>
+                <button class="btn-filter" onclick="filterProjects('ticari', this)">Ticari Plaza & Sanayi</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS GRID SECTION -->
+    <section class="sec-padding">
+        <div class="container">
+            <div class="projects-grid" id="projectsGrid">
+                
+                <!-- Project 1 -->
+                <div class="project-card" data-category="konut">
+                    <div class="project-img-box">
+                        <img src="images/hero.png" alt="Kara Sarıçam Residence">
+                        <div class="project-overlay-gold">
+                            <div class="project-overlay-content">
+                                <span class="proj-loc"><i class="fa-solid fa-location-dot"></i> Sarıçam / Adana</span>
+                                <h3 class="proj-name">Kara Sarıçam Residence & Kuleler</h3>
+                                <p class="proj-summary">Yeni Stadyum aksında 280 dairelik, kapalı yüzme havuzlu, akıllı ev otomasyonlu lüks yaşam projesi.</p>
+                                <button class="btn btn-outline-white btn-sm" onclick="openDetail('Kara Sarıçam Residence & Kuleler', 'Sarıçam / Adana', 'Konut & Rezidans', '42.000 m²', '280 Daire + 18 Ticari Dükkan', '%78 Tamamlandı', 'images/hero.png')">Detayları Gör</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-bar">
+                        <h4>Kara Sarıçam Residence</h4>
+                        <span>Adana / Sarıçam</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="konut">
+                    <div class="project-img-box">
+                        <img src="images/hero.png" alt="Kara Çukurova Towers">
+                        <div class="project-overlay-gold">
+                            <div class="project-overlay-content">
+                                <span class="proj-loc"><i class="fa-solid fa-location-dot"></i> Çukurova / Adana</span>
+                                <h3 class="proj-name">Kara Çukurova Göl Manzaralı Towers</h3>
+                                <p class="proj-summary">Güzelyalı bölgesinde Seyhan Baraj Gölü panoramalı, radye temel ve sismik izolatörlü lüks kule.</p>
+                                <button class="btn btn-outline-white btn-sm" onclick="openDetail('Kara Çukurova Göl Manzaralı Towers', 'Çukurova / Adana', 'Rezidans Kule', '35.000 m²', '3+1 ve 4+1 Ultra Lüks Daireler', 'Tamamlandı (Teslim)', 'images/hero.png')">Detayları Gör</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-bar">
+                        <h4>Kara Çukurova Towers</h4>
+                        <span>Adana / Çukurova</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="konut">
+                    <div class="project-img-box">
+                        <img src="images/estate.png" alt="Kara Mersin Marina Rezidans">
+                        <div class="project-overlay-gold">
+                            <div class="project-overlay-content">
+                                <span class="proj-loc"><i class="fa-solid fa-location-dot"></i> Yenişehir / Mersin</span>
+                                <h3 class="proj-name">Kara Mersin Marina Sky Residence</h3>
+                                <p class="proj-summary">Mersin Marina karşısında Akdeniz manzaralı, geniş teraslı, helipad ve sonsuzluk havuzlu prestij projesi.</p>
+                                <button class="btn btn-outline-white btn-sm" onclick="openDetail('Kara Mersin Marina Sky Residence', 'Yenişehir / Mersin', 'Lüks Rezidans', '48.000 m²', 'Panoramik Deniz Manzaralı Penthouse', 'Devam Ediyor (%65)', 'images/estate.png')">Detayları Gör</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-bar">
+                        <h4>Kara Marina Sky Residence</h4>
+                        <span>Mersin / Yenişehir</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="villa">
+                    <div class="project-img-box">
+                        <img src="images/estate.png" alt="Kara Arsuz Sahil Villaları">
+                        <div class="project-overlay-gold">
+                            <div class="project-overlay-content">
+                                <span class="proj-loc"><i class="fa-solid fa-location-dot"></i> Arsuz / Hatay</span>
+                                <h3 class="proj-name">Kara Arsuz Karaağaç Sahil Villaları</h3>
+                                <p class="proj-summary">Denize sıfır, müstakil yüzme havuzlu, taş-çelik mimarili 16 adet butik lüks malikane yerleşimi.</p>
+                                <button class="btn btn-outline-white btn-sm" onclick="openDetail('Kara Arsuz Karaağaç Sahil Villaları', 'Arsuz / Hatay', 'Müstakil Lüks Villa', '18.000 m²', '16 Adet 5+2 Özel Havuzlu Villa', 'Tamamlandı (Teslim)', 'images/estate.png')">Detayları Gör</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-bar">
+                        <h4>Kara Arsuz Sahil Villaları</h4>
+                        <span>Hatay / Arsuz</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="ticari">
+                    <div class="project-img-box">
+                        <img src="images/commercial.png" alt="Kara Seyhan Plaza">
+                        <div class="project-overlay-gold">
+                            <div class="project-overlay-content">
+                                <span class="proj-loc"><i class="fa-solid fa-location-dot"></i> Seyhan / Adana</span>
+                                <h3 class="proj-name">Kara Seyhan Plaza & İş Merkezi</h3>
+                                <p class="proj-summary">Ziyapaşa Bulvarı aksında kurumsal şirketler için A+ ofis katları, banka şubeleri ve ticari dükkanlar.</p>
+                                <button class="btn btn-outline-white btn-sm" onclick="openDetail('Kara Seyhan Plaza & İş Merkezi', 'Seyhan / Adana', 'Ticari İş Merkezi', '22.000 m²', '45 Ofis Katı + 8 Mağaza', 'Tamamlandı', 'images/commercial.png')">Detayları Gör</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-bar">
+                        <h4>Kara Seyhan Plaza</h4>
+                        <span>Adana / Seyhan</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="konut">
+                    <div class="project-img-box">
+                        <img src="images/hero.png" alt="Kara Antakya Güvenli Yaşam">
+                        <div class="project-overlay-gold">
+                            <div class="project-overlay-content">
+                                <span class="proj-loc"><i class="fa-solid fa-location-dot"></i> Antakya / Hatay</span>
+                                <h3 class="proj-name">Kara Antakya Sismik İzolatörlü Yaşam</h3>
+                                <p class="proj-summary">Deprem sonrası Hatay'ın ihyasında sismik taban izolatörlü ve C40/50 betonarme dayanımlı 120 dairelik kentsel dönüşüm projesi.</p>
+                                <button class="btn btn-outline-white btn-sm" onclick="openDetail('Kara Antakya Sismik İzolatörlü Yaşam', 'Antakya / Hatay', 'Kentsel Dönüşüm & Rezidans', '26.000 m²', '120 Daire (Sismik Taban İzolatörlü)', 'Devam Ediyor (%55)', 'images/hero.png')">Detayları Gör</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info-bar">
+                        <h4>Kara Antakya Sismik Yaşam</h4>
+                        <span>Hatay / Antakya</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAIL MODAL -->
+    <div class="project-modal" id="pModal">
+        <div class="project-modal-card">
+            <button onclick="closeDetail()" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--text-white); font-size: 1.5rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+            <div style="height: 260px; border-radius: 12px; overflow: hidden; margin-bottom: 20px;">
+                <img id="mImg" src="" alt="Proje Detay" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <span style="color: var(--gold-main); font-weight: 700; font-size: 0.85rem;" id="mLoc"></span>
+            <h2 style="color: var(--text-white); font-size: 1.8rem; margin: 5px 0 15px 0;" id="mTitle"></h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; background: rgba(7,9,11,0.6); padding: 18px; border-radius: 10px; border: 1px solid var(--border-light); margin-bottom: 20px;">
+                <div><span style="color: var(--text-grey-dark); font-size: 0.8rem; display: block;">PROJE TÜRÜ</span><strong style="color: var(--text-white);" id="mType"></strong></div>
+                <div><span style="color: var(--text-grey-dark); font-size: 0.8rem; display: block;">TOPLAM İNŞAAT ALANI</span><strong style="color: var(--text-white);" id="mArea"></strong></div>
+                <div><span style="color: var(--text-grey-dark); font-size: 0.8rem; display: block;">KAPASİTE & BİRİM</span><strong style="color: var(--text-white);" id="mUnits"></strong></div>
+                <div><span style="color: var(--text-grey-dark); font-size: 0.8rem; display: block;">DURUM</span><strong style="color: var(--gold-main);" id="mStatus"></strong></div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 12px;">
+                <a id="mWa" href="" target="_blank" class="btn btn-gold"><i class="fa-brands fa-whatsapp"></i> Proje Hakkında Bilgi Al</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="/" class="logo">
+                    <div class="logo-icon">MY</div>
+                    <div class="logo-text">
+                        <span class="logo-title">MASYU YAPI</span>
+                        <span class="logo-subtitle">İNŞAAT</span>
+                    </div>
+                </a>
+                <p class="footer-desc">
+                    Adana, Mersin, Osmaniye ve Hatay genelinde prestijli konut, rezidans ve kentsel dönüşüm projelerinde lider müteahhitlik.
+                </p>
+            </div>
+            
+            <div class="footer-col">
+                <h4 class="footer-title">Kurumsal Sayfalar</h4>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fa-solid fa-chevron-right"></i> Ana Sayfa</a></li>
+                    <li><a href="/hakkimizda"><i class="fa-solid fa-chevron-right"></i> Hakkımızda</a></li>
+                    <li><a href="/hizmetler"><i class="fa-solid fa-chevron-right"></i> Hizmet Birimlerimiz</a></li>
+                    <li><a href="/projeler"><i class="fa-solid fa-chevron-right"></i> Projelerimiz</a></li>
+                    <li><a href="/bolge"><i class="fa-solid fa-chevron-right"></i> Bölgesel SEO Haritası</a></li>
+                    <li><a href="/emlak-otomotiv"><i class="fa-solid fa-chevron-right"></i> Emlak & Otomotiv</a></li>
+                    <li><a href="/katkarshesaplama"><i class="fa-solid fa-chevron-right"></i> Kat Karşılığı Hesaplama</a></li>
+                    <li><a href="/muhendislik"><i class="fa-solid fa-chevron-right"></i> Mühendislik & Kalite</a></li>
+                    <li><a href="/iletisim"><i class="fa-solid fa-chevron-right"></i> İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Bölge Merkez İletişim</h4>
+                <div class="footer-contact-info">
+                    <p><i class="fa-solid fa-location-dot"></i> Çukurova / Adana & Büyükdere Cad. Levent / İstanbul</p>
+                    <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 Masyu Yapı Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterProjects(cat, btn) {
+            document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (cat === 'all' || card.dataset.category === cat) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function openDetail(title, loc, type, area, units, status, img) {
+            document.getElementById('mTitle').textContent = title;
+            document.getElementById('mLoc').textContent = loc;
+            document.getElementById('mType').textContent = type;
+            document.getElementById('mArea').textContent = area;
+            document.getElementById('mUnits').textContent = units;
+            document.getElementById('mStatus').textContent = status;
+            document.getElementById('mImg').src = img;
+            document.getElementById('mWa').href = `https://wa.me/905320550945?text=${encodeURIComponent(`Merhaba, "${title}" projeniz hakkında bilgi ve teklif almak istiyorum.`)}`;
+            document.getElementById('pModal').classList.add('active');
+        }
+
+        function closeDetail() {
+            document.getElementById('pModal').classList.remove('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mNav = document.getElementById('mobile-nav');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    toggleBtn.classList.toggle('active');
+                    mNav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

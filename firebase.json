@@ -1,0 +1,48 @@
+{
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "masyu",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log"
+      ]
+    }
+  ],
+  "hosting": {
+    "site": "masyuinsaat",
+    "public": "public",
+    "cleanUrls": true,
+    "ignore": [
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/api/**",
+        "function": {
+          "functionId": "masyuApi",
+          "region": "europe-west1"
+        }
+      }
+    ],
+    "headers": [
+      {
+        "source": "/api/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "private, no-store"
+          }
+        ]
+      }
+    ]
+  },
+  "firestore": [
+    {
+      "database": "masyu",
+      "rules": "firestore.rules"
+    }
+  ]
+}

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lüks Emlak & Otomotiv Portföyü | Masyu Yapı Grup</title>
+    <meta name="description" content="Masyu Yapı Grup lüks konut, rezidans, arsa, ticari gayrimenkul ve premium otomotiv / iş makinesi portföyü. Kat karşılığı, nakit ve araç takaslı satış fırsatları.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .emlak-hero {
+            padding: 160px 0 80px 0;
+            background: radial-gradient(circle at 50% 20%, rgba(197, 168, 128, 0.18) 0%, rgba(15, 18, 23, 0.96) 75%),
+                        linear-gradient(180deg, rgba(7, 9, 11, 0.92) 0%, #0f1217 100%),
+                        url('images/automotive.png') center/cover no-repeat;
+            background-blend-mode: overlay;
+            border-bottom: 1px solid var(--border-gold);
+            text-align: center;
+        }
+
+        .emlak-filter-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .btn-tab-filter {
+            padding: 12px 28px;
+            border-radius: 30px;
+            background: rgba(19, 23, 31, 0.8);
+            border: 1px solid rgba(197, 168, 128, 0.3);
+            color: var(--text-grey-light);
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition-fast);
+        }
+
+        .btn-tab-filter:hover {
+            background: rgba(197, 168, 128, 0.15);
+            border-color: var(--gold-main);
+            color: var(--gold-main);
+            transform: translateY(-2px);
+        }
+
+        .btn-tab-filter.active {
+            background: linear-gradient(135deg, var(--gold-main), var(--gold-dark));
+            color: var(--primary-dark);
+            border-color: var(--gold-main);
+            box-shadow: 0 4px 20px rgba(197, 168, 128, 0.4);
+        }
+
+        /* Listing Grid */
+        .listing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .listing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-dark);
+        }
+
+        .listing-card:hover {
+            border-color: var(--gold-main);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .listing-img-box {
+            position: relative;
+            width: 100%;
+            height: 230px;
+            overflow: hidden;
+        }
+
+        .listing-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .listing-card:hover .listing-img-box img {
+            transform: scale(1.06);
+        }
+
+        .listing-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(7, 9, 11, 0.85);
+            border: 1px solid var(--gold-main);
+            color: var(--gold-main);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(4px);
+        }
+
+        .listing-badge-takas {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(16, 185, 129, 0.9);
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .listing-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .listing-location {
+            color: var(--gold-main);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .listing-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .listing-specs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background: rgba(7, 9, 11, 0.5);
+            border: 1px solid var(--border-light);
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        .spec-item span {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-grey-dark);
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .spec-item strong {
+            font-size: 0.9rem;
+            color: var(--text-white);
+            font-weight: 700;
+        }
+
+        .listing-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-light);
+            padding-top: 15px;
+        }
+
+        .listing-price {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--gold-main);
+        }
+
+        /* Takas & Barter Banner */
+        .takas-banner {
+            background: linear-gradient(135deg, rgba(22, 26, 32, 0.95), rgba(15, 18, 22, 0.95));
+            border: 1px solid var(--gold-main);
+            border-radius: 20px;
+            padding: 45px 50px;
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .takas-banner-text h3 {
+            font-size: 2rem;
+            color: var(--text-white);
+            margin-bottom: 10px;
+        }
+
+        .takas-banner-text p {
+            color: var(--text-grey-light);
+            font-size: 1rem;
+            max-width: 650px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .listing-grid { grid-template-columns: 1fr; }
+            .takas-banner { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</span>
+                <span><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</span>
+                <span><i class="fa-solid fa-location-dot"></i> Levent, İstanbul</span>
+            </div>
+            <div class="top-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header scrolled">
+        <div class="container header-container">
+            <a href="/" class="logo" id="logo">
+                <div class="logo-icon">MY</div>
+                <div class="logo-text">
+                    <span class="logo-title">MASYU YAPI</span>
+                    <span class="logo-subtitle">GRUP & OTOMOTİV</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="/" class="nav-link">Ana Sayfa</a></li>
+                    
+                    <li class="nav-item-dropdown">
+                        <a href="/hakkimizda" class="nav-link">Kurumsal <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="/hakkimizda" class="nav-dropdown-link"><i class="fa-solid fa-building-columns"></i> Hakkımızda & Vizyon</a>
+                            <a href="/muhendislik" class="nav-dropdown-link"><i class="fa-solid fa-shield-halved"></i> Mühendislik & Standartlar</a>
+                            <a href="/bolge" class="nav-dropdown-link"><i class="fa-solid fa-map-location-dot"></i> Bölgesel Hizmet Ağı</a>
+                        </div>
+                    </li>
+
+                    <li><a href="/hizmetler" class="nav-link">Hizmetlerimiz</a></li>
+                    <li><a href="/projeler" class="nav-link">Projelerimiz</a></li>
+                    <li><a href="/emlak-otomotiv" class="nav-link active">Emlak & Otomotiv</a></li>
+                    <li><a href="/katkarshesaplama" class="nav-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator" style="margin-right: 4px;"></i> Kat Karşılığı Hesapla</a></li>
+                    <li><a href="/iletisim" class="nav-link">İletişim</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="/iletisim" class="btn btn-gold btn-header">Teklif Al <i class="fa-solid fa-arrow-right"></i></a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menüyü Aç/Kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="/" class="mobile-link">Ana Sayfa</a></li>
+            <li><a href="/hakkimizda" class="mobile-link">Hakkımızda & Kurumsal</a></li>
+            <li><a href="/muhendislik" class="mobile-link">Mühendislik & Kalite</a></li>
+            <li><a href="/hizmetler" class="mobile-link">Hizmet Birimleri</a></li>
+            <li><a href="/projeler" class="mobile-link">Projelerimiz</a></li>
+            <li><a href="/bolge" class="mobile-link">Bölgelerimiz</a></li>
+            <li><a href="/emlak-otomotiv" class="mobile-link">Emlak & Otomotiv</a></li>
+            <li><a href="/katkarshesaplama" class="mobile-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator"></i> Kat Karşılığı Hesaplama</a></li>
+            <li><a href="/iletisim" class="mobile-link">İletişim</a></li>
+        </ul>
+        <div class="mobile-nav-contact">
+            <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+            <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+        </div>
+    </div>
+
+    <!-- MAIN HERO -->
+    <section class="emlak-hero">
+        <div class="container">
+            <span class="sub-title">PREMİUM GAYRİMENKUL & LÜKS ARAÇ VİTRİNİ</span>
+            <h1 style="font-size: 3rem; font-weight: 800; color: var(--text-white); margin-top: 10px;">
+                Seçkin <span class="text-gold">Emlak & Otomotiv</span> Portföyü
+            </h1>
+            <p style="color: var(--text-grey-light); font-size: 1.1rem; max-width: 750px; margin: 15px auto 0 auto; line-height: 1.8;">
+                Masyu Yapı Grup bünyesindeki satılık lüks rezidanslar, villalar, yatırımlık arsalar ve premium segment otomotiv filosu. Arsa & gayrimenkul takas seçenekleriyle.
+            </p>
+
+            <!-- Filter Buttons -->
+            <div class="emlak-filter-nav">
+                <button class="btn-tab-filter active" onclick="filterItems('all', this)">
+                    <i class="fa-solid fa-layer-group"></i> Tüm Portföy
+                </button>
+                <button class="btn-tab-filter" onclick="filterItems('emlak', this)">
+                    <i class="fa-solid fa-building"></i> Lüks Emlak & Arsa (8)
+                </button>
+                <button class="btn-tab-filter" onclick="filterItems('otomotiv', this)">
+                    <i class="fa-solid fa-car"></i> Premium Otomotiv (6)
+                </button>
+                <button class="btn-tab-filter" onclick="filterItems('is-makinesi', this)">
+                    <i class="fa-solid fa-truck-monster"></i> Şantiye & İş Makineleri (4)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- LISTINGS CONTAINER -->
+    <section class="sec-padding">
+        <div class="container">
+            
+            <div class="listing-grid" id="listingGrid">
+                <!-- Injected via JS -->
+            </div>
+
+            <!-- Takas & Barter CTA Banner -->
+            <div class="takas-banner">
+                <div class="takas-banner-text">
+                    <span style="color: var(--gold-main); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;"><i class="fa-solid fa-handshake"></i> ESNEK ÖDEME & BARTER İMKANI</span>
+                    <h3>Arsanız veya Lüks Aracınız ile Takas Yapalım</h3>
+                    <p>
+                        Masyu Yapı Grup, portföyümüzdeki lüks konutlar, villalar veya üst segment araçlar için arsa, gayrimenkul ve araç takas (barter) tekliflerini anında ekspertiz değerlendirmesi yaparak kabul etmektedir.
+                    </p>
+                </div>
+                <a href="https://wa.me/905320550945?text=Merhaba,%20Emlak%20veya%20Otomotiv%20portföyünüz%20için%20takas/değerleme%20teklifi%20vermek%20istiyorum." target="_blank" class="btn btn-gold" style="white-space: nowrap; padding: 16px 32px; font-size: 1rem;">
+                    <i class="fa-brands fa-whatsapp"></i> Takas Teklifi İlet
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="/" class="logo">
+                    <div class="logo-icon">MY</div>
+                    <div class="logo-text">
+                        <span class="logo-title">MASYU YAPI</span>
+                        <span class="logo-subtitle">GRUP</span>
+                    </div>
+                </a>
+                <p class="footer-desc">
+                    İnşaat, kentsel dönüşüm, lüks gayrimenkul ve premium otomotiv sektöründe Türkiye'nin güvenilir ve prestijli markası.
+                </p>
+            </div>
+            
+            <div class="footer-col">
+                <h4 class="footer-title">Hızlı Bağlantılar</h4>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fa-solid fa-chevron-right"></i> Ana Sayfa</a></li>
+                    <li><a href="/hizmetler"><i class="fa-solid fa-chevron-right"></i> Hizmet Birimlerimiz</a></li>
+                    <li><a href="/bolge"><i class="fa-solid fa-chevron-right"></i> Bölgesel SEO Haritası</a></li>
+                    <li><a href="/emlak-otomotiv"><i class="fa-solid fa-chevron-right"></i> Emlak & Otomotiv</a></li>
+                    <li><a href="/katkarshesaplama"><i class="fa-solid fa-chevron-right"></i> Kat Karşılığı Hesaplama</a></li>
+                    <li><a href="/dashboard"><i class="fa-solid fa-chevron-right"></i> Yönetim Paneli</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Merkez İletişim</h4>
+                <div class="footer-contact-info">
+                    <p><i class="fa-solid fa-location-dot"></i> Büyükdere Cad. No: 195 Levent, Beşiktaş / İstanbul</p>
+                    <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 Masyu Yapı Grup A.Ş. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT ENGINE -->
+    <script>
+        // DEFAULT LISTINGS DATA
+        const DEFAULT_EMLAK_OTOMOTIV = [
+            // EMLAK
+            {
+                id: 'eo1',
+                category: 'emlak',
+                type: 'Lüks Rezidans (Penthouse)',
+                title: 'Kara Premium Towers 360° Boğaz Manzaralı Penthouse',
+                location: 'Ataşehir / İstanbul',
+                specs: { s1: '4+1 Dubleks', s2: '380 m²', s3: 'Akıllı Ev / Sky Pool' },
+                price: '48.500.000 ₺',
+                takas: true,
+                status: 'Satışta',
+                img: 'images/hero.png'
+            },
+            {
+                id: 'eo2',
+                category: 'emlak',
+                type: 'Özel Malikane',
+                title: 'Kara Yalıkavak Marina & Deniz Sıfır Sonsuzluk Havuzlu Malikane',
+                location: 'Yalıkavak / Bodrum',
+                specs: { s1: '6+2 Müstakil', s2: '850 m²', s3: 'Helipad & İskele' },
+                price: '115.000.000 ₺',
+                takas: true,
+                status: 'Satışta',
+                img: 'images/estate.png'
+            },
+            {
+                id: 'eo3',
+                category: 'emlak',
+                type: 'Yatırımlık Konut İmarlı Arsa',
+                title: 'Sarıçam Yeni Stadyum Yanı 1.60 Emsal Kat Karşılığına Uygun Arsa',
+                location: 'Sarıçam / Adana',
+                specs: { s1: 'Konut İmarlı', s2: '5.200 m²', s3: 'KAKS: 1.60' },
+                price: '34.000.000 ₺',
+                takas: true,
+                status: 'Satışta',
+                img: 'images/commercial.png'
+            },
+            {
+                id: 'eo4',
+                category: 'emlak',
+                type: 'A+ Ticari Plaza Katı',
+                title: 'Büyükdere Caddesi Üzeri Kurumsal Kiracılı Hazır Ofis Katı',
+                location: 'Levent / İstanbul',
+                specs: { s1: 'A+ Plaza', s2: '450 m²', s3: 'Yüksek Getirili' },
+                price: '62.000.000 ₺',
+                takas: false,
+                status: 'Rezerve',
+                img: 'images/commercial.png'
+            },
+            // OTOMOTİV
+            {
+                id: 'eo5',
+                category: 'otomotiv',
+                type: 'Lüks SUV',
+                title: '2025 Mercedes-Benz G 63 AMG V8 BiTurbo Magno Night Black',
+                location: 'Levent Showroom / İstanbul',
+                specs: { s1: '2025 Model', s2: '8.500 KM', s3: '585 HP / Otomatik' },
+                price: '22.800.000 ₺',
+                takas: true,
+                status: 'Satışta',
+                img: 'images/automotive.png'
+            },
+            {
+                id: 'eo6',
+                category: 'otomotiv',
+                type: 'Lüks Sedan & Spor',
+                title: '2024 Porsche Panamera 4S E-Hybrid Sport Turismo',
+                location: 'Levent Showroom / İstanbul',
+                specs: { s1: '2024 Model', s2: '14.200 KM', s3: '560 HP / 4x4' },
+                price: '16.400.000 ₺',
+                takas: true,
+                status: 'Satışta',
+                img: 'images/automotive.png'
+            },
+            {
+                id: 'eo7',
+                category: 'otomotiv',
+                type: 'Premium SUV',
+                title: '2024 Land Rover Range Rover Autobiography Long Wheelbase D350',
+                location: 'Bodrum Showroom / Muğla',
+                specs: { s1: '2024 Model', s2: '19.000 KM', s3: '350 HP / Dizel' },
+                price: '19.250.000 ₺',
+                takas: true,
+                status: 'Satışta',
+                img: 'images/automotive.png'
+            },
+            // İŞ MAKİNESİ & FİLO
+            {
+                id: 'eo8',
+                category: 'is-makinesi',
+                type: 'Paletli Ekskavatör',
+                title: '2024 CAT 336 GC Ağır Hizmet Paletli Ekskavatör',
+                location: 'Şantiye Parkı / İstanbul',
+                specs: { s1: '2024 Model', s2: '1.200 Saat', s3: '36 Ton' },
+                price: '12.500.000 ₺',
+                takas: true,
+                status: 'Satışta',
+                img: 'images/hero.png'
+            },
+            {
+                id: 'eo9',
+                category: 'is-makinesi',
+                type: 'Mobil Vinç',
+                title: '2023 Liebherr LTM 1100 100 Ton Teleskopik Mobil Vinç',
+                location: 'Şantiye Parkı / Adana',
+                specs: { s1: '2023 Model', s2: '60 Metre Bom', s3: '100 Ton Kapasite' },
+                price: '28.000.000 ₺',
+                takas: true,
+                status: 'Satışta',
+                img: 'images/commercial.png'
+            }
+        ];
+
+        // In-memory state without local storage
+        let inventory = [...DEFAULT_EMLAK_OTOMOTIV];
+        let currentFilter = 'all';
+
+        function renderListings() {
+            const grid = document.getElementById('listingGrid');
+            grid.innerHTML = '';
+
+            const filtered = inventory.filter(item => currentFilter === 'all' || item.category === currentFilter);
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-grey-light);">
+                        <i class="fa-solid fa-folder-open" style="font-size: 3rem; color: var(--gold-dark); margin-bottom: 15px;"></i>
+                        <h3>Bu kategoride şu an aktif ilan bulunmamaktadır.</h3>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'listing-card';
+                
+                const waMessage = encodeURIComponent(`Merhaba, Masyu Yapı Grup web sitesindeki "${item.title}" (${item.price}) ilanı hakkında detaylı bilgi ve teklif almak istiyorum.`);
+
+                card.innerHTML = `
+                    <div class="listing-img-box">
+                        <img src="${item.img || 'images/hero.png'}" alt="${item.title}">
+                        <div class="listing-tag">${item.type}</div>
+                        ${item.takas ? '<div class="listing-badge-takas"><i class="fa-solid fa-rotate"></i> Takasa Uygun</div>' : ''}
+                    </div>
+                    <div class="listing-body">
+                        <div class="listing-location"><i class="fa-solid fa-location-dot"></i> ${item.location}</div>
+                        <h3 class="listing-title">${item.title}</h3>
+                        
+                        <div class="listing-specs">
+                            <div class="spec-item">
+                                <span>Detay 1</span>
+                                <strong>${item.specs.s1}</strong>
+                            </div>
+                            <div class="spec-item">
+                                <span>Detay 2</span>
+                                <strong>${item.specs.s2}</strong>
+                            </div>
+                            <div class="spec-item">
+                                <span>Detay 3</span>
+                                <strong>${item.specs.s3}</strong>
+                            </div>
+                        </div>
+
+                        <div class="listing-footer">
+                            <div class="listing-price">${item.price}</div>
+                            <a href="https://wa.me/905320550945?text=${waMessage}" target="_blank" class="btn btn-gold btn-sm" style="padding: 8px 16px; font-size: 0.82rem;">
+                                <i class="fa-brands fa-whatsapp"></i> Bilgi Al
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterItems(category, btn) {
+            currentFilter = category;
+            document.querySelectorAll('.btn-tab-filter').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            renderListings();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mNav = document.getElementById('mobile-nav');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    toggleBtn.classList.toggle('active');
+                    mNav.classList.toggle('active');
+                });
+            }
+
+            renderListings();
+        });
+    </script>
+</body>
+</html>

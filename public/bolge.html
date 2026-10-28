@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Dynamic Programmatic SEO Meta Tags (Overwritten by JS Engine) -->
+    <title id="seo-title">Bölgesel İnşaat, Kat Karşılığı & Kentsel Dönüşüm | Masyu Yapı</title>
+    <meta name="description" id="seo-description" content="Masyu Yapı Türkiye genelinde lüks konut, kentsel dönüşüm, kat karşılığı arsa taahhüdü, villa ve ticari plaza projelerinde lider mühendislik çözümleri sunar.">
+    <meta name="keywords" id="seo-keywords" content="inşaat firması, kat karşılığı inşaat, kentsel dönüşüm, arsa payı hesaplama, lüks villa yapımı, cebrail kara inşaat">
+    <link rel="canonical" id="seo-canonical" href="https://cebrailkarainsaat.web.app/bolge">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" id="og-title" content="Bölgesel İnşaat & Kat Karşılığı Taahhüt | Masyu Yapı">
+    <meta property="og:description" id="og-description" content="Masyu Yapı bölgesel kentsel dönüşüm, kat karşılığı lüks konut ve ticari inşaat hizmetleri.">
+    <meta property="og:image" content="https://cebrailkarainsaat.web.app/images/hero.png">
+    <meta property="og:url" id="og-url" content="https://cebrailkarainsaat.web.app/bolge">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Programmatic Schema.org JSON-LD (Dynamic) -->
+    <script type="application/ld+json" id="geo-jsonld-business">
+    {
+      "@context": "https://schema.org",
+      "@type": "GeneralContractor",
+      "name": "Masyu Yapı",
+      "url": "https://cebrailkarainsaat.web.app",
+      "logo": "https://cebrailkarainsaat.web.app/images/hero.png",
+      "image": "https://cebrailkarainsaat.web.app/images/hero.png",
+      "telephone": "+905320550945",
+      "email": "info@cebrailkarainsaat.com",
+      "priceRange": "$$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Büyükdere Cad. No: 195 Levent",
+        "addressLocality": "Beşiktaş",
+        "addressRegion": "İstanbul",
+        "postalCode": "34394",
+        "addressCountry": "TR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.98",
+        "reviewCount": "142"
+      }
+    }
+    </script>
+    <script type="application/ld+json" id="geo-jsonld-faq"></script>
+    <script type="application/ld+json" id="geo-jsonld-breadcrumb"></script>
+
+    <style>
+        /* Programmatic Geo Page Styling */
+        .geo-hero-section {
+            padding: 160px 0 90px 0;
+            background: radial-gradient(circle at 50% 20%, rgba(197, 168, 128, 0.15) 0%, rgba(15, 18, 23, 0.95) 75%),
+                        linear-gradient(180deg, rgba(7, 9, 11, 0.9) 0%, #0f1217 100%),
+                        url('images/hero.png') center/cover no-repeat;
+            background-blend-mode: overlay;
+            position: relative;
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .geo-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--gold-main);
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .geo-breadcrumb a {
+            color: var(--text-grey-light);
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .geo-breadcrumb a:hover {
+            color: var(--gold-main);
+        }
+
+        .geo-tag-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(197, 168, 128, 0.15);
+            border: 1px solid var(--gold-main);
+            color: var(--gold-main);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .geo-hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-white);
+        }
+
+        .geo-hero-title span {
+            background: linear-gradient(135deg, var(--gold-main), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .geo-hero-desc {
+            font-size: 1.15rem;
+            color: var(--text-grey-light);
+            max-width: 800px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        /* Interactive Filter Bar */
+        .geo-filter-bar {
+            background: rgba(19, 23, 31, 0.95);
+            border: 1px solid var(--gold-main);
+            border-radius: 16px;
+            padding: 25px 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 25px rgba(197, 168, 128, 0.15);
+            margin-top: 40px;
+        }
+
+        .geo-filter-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) auto;
+            gap: 15px;
+            align-items: flex-end;
+        }
+
+        .geo-filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .geo-filter-group label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gold-main);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .geo-filter-control {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(7, 9, 11, 0.85);
+            border: 1px solid rgba(197, 168, 128, 0.3);
+            border-radius: 8px;
+            color: var(--text-white);
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition-fast);
+        }
+
+        .geo-filter-control:focus {
+            border-color: var(--gold-main);
+            box-shadow: 0 0 12px rgba(197, 168, 128, 0.3);
+        }
+
+        /* Local Insights Cards */
+        .geo-insights-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 50px 0;
+        }
+
+        .geo-insight-card {
+            background: rgba(19, 23, 31, 0.75);
+            border: 1px solid rgba(197, 168, 128, 0.18);
+            border-radius: 14px;
+            padding: 24px;
+            transition: var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .geo-insight-card:hover {
+            border-color: var(--gold-main);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .geo-insight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gold-main);
+        }
+
+        .geo-insight-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-grey-dark);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .geo-insight-val {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--gold-main);
+            margin-bottom: 4px;
+        }
+
+        .geo-insight-sub {
+            font-size: 0.82rem;
+            color: var(--text-grey-light);
+        }
+
+        /* Engineering Deep Dive Container */
+        .geo-content-box {
+            background: rgba(19, 23, 31, 0.6);
+            border: 1px solid rgba(197, 168, 128, 0.15);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+        }
+
+        .geo-content-box h2 {
+            font-size: 2rem;
+            color: var(--text-white);
+            margin-bottom: 20px;
+        }
+
+        .geo-content-box p {
+            color: var(--text-grey-light);
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        /* Local Calculator Card */
+        .geo-calc-box {
+            background: linear-gradient(135deg, rgba(19, 23, 31, 0.95), rgba(7, 9, 11, 0.98));
+            border: 1px solid var(--gold-main);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+            margin-bottom: 60px;
+        }
+
+        .geo-calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .calc-result-badge {
+            background: rgba(197, 168, 128, 0.1);
+            border: 1px dashed var(--gold-main);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            background: rgba(15, 18, 23, 0.7);
+            border: 1px solid rgba(197, 168, 128, 0.15);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: var(--transition-fast);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(197, 168, 128, 0.4);
+        }
+
+        .faq-header {
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-header h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .faq-header i.chevron {
+            color: var(--gold-main);
+            transition: var(--transition-fast);
+        }
+
+        .faq-body {
+            padding: 0 24px 22px 24px;
+            color: var(--text-grey-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-item.active .faq-body {
+            display: block;
+        }
+
+        .faq-item.active .faq-header i.chevron {
+            transform: rotate(180deg);
+        }
+
+        /* Cross Links Matrix */
+        .geo-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .geo-link-item {
+            background: rgba(19, 23, 31, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 12px 16px;
+            border-radius: 8px;
+            color: var(--text-grey-light);
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .geo-link-item i {
+            color: var(--gold-main);
+            font-size: 0.75rem;
+        }
+
+        .geo-link-item:hover {
+            background: rgba(197, 168, 128, 0.12);
+            border-color: var(--gold-main);
+            color: var(--gold-main);
+            transform: translateX(3px);
+        }
+
+        @media (max-width: 992px) {
+            .geo-hero-title { font-size: 2.2rem; }
+            .geo-filter-grid { grid-template-columns: 1fr; }
+            .geo-insights-grid { grid-template-columns: repeat(2, 1fr); }
+            .geo-calc-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .geo-hero-title { font-size: 1.8rem; }
+            .geo-insights-grid { grid-template-columns: 1fr; }
+            .geo-content-box { padding: 25px 20px; }
+            .geo-calc-box { padding: 25px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</span>
+                <span><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</span>
+                <span><i class="fa-solid fa-location-dot"></i> Levent, İstanbul</span>
+            </div>
+            <div class="top-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header scrolled">
+        <div class="container header-container">
+            <a href="/" class="logo" id="logo">
+                <div class="logo-icon">MY</div>
+                <div class="logo-text">
+                    <span class="logo-title">MASYU YAPI</span>
+                    <span class="logo-subtitle">İNŞAAT</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="/" class="nav-link">Ana Sayfa</a></li>
+                    
+                    <li class="nav-item-dropdown">
+                        <a href="/hakkimizda" class="nav-link active">Kurumsal <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="/hakkimizda" class="nav-dropdown-link"><i class="fa-solid fa-building-columns"></i> Hakkımızda & Vizyon</a>
+                            <a href="/muhendislik" class="nav-dropdown-link"><i class="fa-solid fa-shield-halved"></i> Mühendislik & Standartlar</a>
+                            <a href="/bolge" class="nav-dropdown-link" style="color: var(--gold-main);"><i class="fa-solid fa-map-location-dot"></i> Bölgesel Hizmet Ağı</a>
+                        </div>
+                    </li>
+
+                    <li><a href="/hizmetler" class="nav-link">Hizmetlerimiz</a></li>
+                    <li><a href="/projeler" class="nav-link">Projelerimiz</a></li>
+                    <li><a href="/emlak-otomotiv" class="nav-link">Emlak & Otomotiv</a></li>
+                    <li><a href="/katkarshesaplama" class="nav-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator" style="margin-right: 4px;"></i> Kat Karşılığı Hesapla</a></li>
+                    <li><a href="/iletisim" class="nav-link">İletişim</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="/iletisim" class="btn btn-gold btn-header">Teklif Al <i class="fa-solid fa-arrow-right"></i></a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menüyü Aç/Kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="/" class="mobile-link">Ana Sayfa</a></li>
+            <li><a href="/hakkimizda" class="mobile-link">Hakkımızda & Kurumsal</a></li>
+            <li><a href="/muhendislik" class="mobile-link">Mühendislik & Kalite</a></li>
+            <li><a href="/hizmetler" class="mobile-link">Hizmet Birimleri</a></li>
+            <li><a href="/projeler" class="mobile-link">Projelerimiz</a></li>
+            <li><a href="/bolge" class="mobile-link">Bölgelerimiz</a></li>
+            <li><a href="/emlak-otomotiv" class="mobile-link">Emlak & Otomotiv</a></li>
+            <li><a href="/katkarshesaplama" class="mobile-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator"></i> Kat Karşılığı Hesaplama</a></li>
+            <li><a href="/iletisim" class="mobile-link">İletişim</a></li>
+        </ul>
+        <div class="mobile-nav-contact">
+            <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+            <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+        </div>
+    </div>
+
+    <!-- MAIN GEO ENGINE CONTAINER -->
+    <main>
+        
+        <!-- HERO SECTION -->
+        <section class="geo-hero-section">
+            <div class="container">
+                
+                <!-- Breadcrumbs -->
+                <div class="geo-breadcrumb" id="geoBreadcrumb">
+                    <a href="/"><i class="fa-solid fa-house"></i> Ana Sayfa</a>
+                    <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: var(--text-grey-dark);"></i>
+                    <a href="/bolge">Bölgesel Hizmet Ağı</a>
+                    <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: var(--text-grey-dark);"></i>
+                    <span id="breadcrumbCity">İstanbul</span>
+                    <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: var(--text-grey-dark);"></i>
+                    <span id="breadcrumbDistrict" style="color: var(--text-white); font-weight: 700;">Kadıköy</span>
+                </div>
+
+                <!-- Tag Pill -->
+                <div class="geo-tag-pill" id="geoTagPill">
+                    <i class="fa-solid fa-location-dot"></i> <span id="tagText">KADIKÖY / İSTANBUL BÖLGESİ</span>
+                </div>
+
+                <!-- Dynamic Titles -->
+                <h1 class="geo-hero-title" id="geoHeroH1">
+                    Kadıköy <span id="geoHeroServiceTitle">Kat Karşılığı & Kentsel Dönüşüm</span> İnşaat Firması
+                </h1>
+
+                <p class="geo-hero-desc" id="geoHeroDesc">
+                    Masyu Yapı, Kadıköy genelinde (Fenerbahçe, Caddebostan, Suadiye, Erenköy, Moda) yüksek emsal verimliliği, C40/50 depreme tam dayanıklı betonarme taşıyıcı sistemler ve noter tasdikli teminat garantisiyle A+ lüks konut taahhüdü gerçekleştirmektedir.
+                </p>
+
+                <!-- Actions -->
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="#geoSimulator" class="btn btn-gold">
+                        <i class="fa-solid fa-calculator"></i> Bölgesel Değerleme Simülatörü
+                    </a>
+                    <a href="https://wa.me/905320550945" target="_blank" class="btn btn-outline-white" id="geoWaHeroBtn">
+                        <i class="fa-brands fa-whatsapp"></i> Bölge Temsilcisi ile Görüş
+                    </a>
+                </div>
+
+                <!-- Programmatic Geo Discovery Filter -->
+                <div class="geo-filter-bar">
+                    <div class="geo-filter-grid">
+                        <div class="geo-filter-group">
+                            <label><i class="fa-solid fa-city"></i> İl Seçin</label>
+                            <select id="filterCity" class="geo-filter-control" onchange="onCityChange()">
+                                <!-- Injected via JS -->
+                            </select>
+                        </div>
+
+                        <div class="geo-filter-group">
+                            <label><i class="fa-solid fa-map-pin"></i> İlçe / Bölge Seçin</label>
+                            <select id="filterDistrict" class="geo-filter-control" onchange="onDistrictChange()">
+                                <!-- Injected via JS -->
+                            </select>
+                        </div>
+
+                        <div class="geo-filter-group">
+                            <label><i class="fa-solid fa-hammer"></i> Hizmet / Proje Türü</label>
+                            <select id="filterService" class="geo-filter-control" onchange="onServiceChange()">
+                                <option value="kat-karsiligi">Kat Karşılığı Arsa Taahhüdü</option>
+                                <option value="kentsel-donusum">Kentsel Dönüşüm & Riskli Yapı</option>
+                                <option value="luks-rezidans">Lüks Rezidans & Konut Projesi</option>
+                                <option value="luks-villa">Lüks Müstakil Villa & Malikane</option>
+                                <option value="ticari-plaza">Ticari Plaza & İş Merkezi</option>
+                                <option value="endustriyel-fabrika">Endüstriyel Tesis & OSB Fabrika</option>
+                                <option value="celik-konstruksiyon">Çelik Konstrüksiyon Taşıyıcı</option>
+                                <option value="saha-betonu">Endüstriyel Zemin & Saha Betonu</option>
+                                <option value="guclendirme">Deprem Güçlendirme & Restorasyon</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-gold" onclick="applyGeoFilter()" style="padding: 12px 24px; height: 47px;">
+                            <i class="fa-solid fa-magnifying-glass"></i> İncele
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- REGIONAL ENGINEERING & REAL ESTATE INSIGHTS -->
+        <section class="sec-padding">
+            <div class="container">
+                
+                <div class="section-head text-center" style="margin-bottom: 40px;">
+                    <span class="sub-title" id="insightSubHeader">BÖLGESEL PİYASA VE İMAR VERİLERİ</span>
+                    <h2 class="sec-title" id="insightTitle">Kadıköy İnşaat & Gayrimenkul Analizi</h2>
+                    <p class="sec-desc" id="insightDesc">Bölgenin güncel ortalama rayiç değerleri, emsal hakları ve zemin mühendisliği standartları.</p>
+                </div>
+
+                <!-- KPI Metric Grid -->
+                <div class="geo-insights-grid">
+                    <div class="geo-insight-card">
+                        <div class="geo-insight-label">Ortalama m² Rayiç Değeri</div>
+                        <div class="geo-insight-val" id="kpiM2Price">140.000 ₺</div>
+                        <div class="geo-insight-sub" id="kpiM2Sub">Lüks Konut & Rezidans Teslim Ortalaması</div>
+                    </div>
+
+                    <div class="geo-insight-card">
+                        <div class="geo-insight-label">Kat Karşılığı Paylaşım Oranı</div>
+                        <div class="geo-insight-val" id="kpiShareRatio">%50 - %55</div>
+                        <div class="geo-insight-sub">Arsa Malikleri Lehine Maksimum Hak</div>
+                    </div>
+
+                    <div class="geo-insight-card">
+                        <div class="geo-insight-label">Bölgesel Zemin Sınıfı</div>
+                        <div class="geo-insight-val" id="kpiSoilGrade" style="font-size: 1.5rem;">ZB / ZC Sınıfı</div>
+                        <div class="geo-insight-sub" id="kpiSoilSub">Fore Kazık & Jet Grout Güçlendirmesi</div>
+                    </div>
+
+                    <div class="geo-insight-card">
+                        <div class="geo-insight-label">Proje Teslim Süresi</div>
+                        <div class="geo-insight-val" id="kpiDeliveryTime">14 - 18 Ay</div>
+                        <div class="geo-insight-sub">Resmi Noter Onaylı Sözleşme Güvencesi</div>
+                    </div>
+                </div>
+
+                <!-- Detailed Content Box -->
+                <div class="geo-content-box">
+                    <h2 id="geoContentH2">Kadıköy Bölgesinde Neden Masyu Yapı?</h2>
+                    <div id="geoContentBody">
+                        <p>Kadıköy, İstanbul'un hem kültürel hem de gayrimenkul değeri en yüksek akslarından biridir. Özellikle Bağdat Caddesi, Fenerbahçe, Caddebostan, Suadiye ve Erenköy mahallelerinde yürütülen kentsel dönüşüm ve kat karşılığı projelerinde en önemli kriter; arsa payı haklarının eksiksiz korunması ve zemin yapısına uygun statik çözümlerdir.</p>
+                        <p><strong>Masyu Yapı</strong>, Kadıköy projelerinde C40/50 sınıfı yüksek dayanımlı beton, B420C nervürlü donatı çeliği ve temel altı jet-grouting / fore kazık teknolojilerini standart olarak uygulamaktadır. Maliklerin kira yardımı, tapu devir süreçleri ve ruhsat takip işlemleri alanında uzman hukuk ve mühendislik kadromuzca eksiksiz yönetilir.</p>
+                    </div>
+
+                    <div style="display: flex; gap: 20px; margin-top: 30px; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 10px; color: var(--gold-main); font-weight: 700;">
+                            <i class="fa-solid fa-shield-halved" style="font-size: 1.3rem;"></i> %100 Teminat Mektubu
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; color: var(--gold-main); font-weight: 700;">
+                            <i class="fa-solid fa-award" style="font-size: 1.3rem;"></i> 1. Sınıf Lüks İthal Malzeme
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; color: var(--gold-main); font-weight: 700;">
+                            <i class="fa-solid fa-house-chimney-crack" style="font-size: 1.3rem;"></i> Deprem Yönetmeliğine Tam Uyum
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DYNAMIC REGIONAL ROI SIMULATOR -->
+                <div class="geo-calc-box" id="geoSimulator">
+                    <div class="geo-calc-grid">
+                        <div>
+                            <span class="sub-title" style="color: var(--gold-main); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">ANLIK ARSA DEĞERLEME SİMÜLATÖRÜ</span>
+                            <h3 style="font-size: 1.8rem; color: var(--text-white); margin: 10px 0 15px 0;" id="calcBoxTitle">Kadıköy Arsanızın Değerini Hesaplayın</h3>
+                            <p style="color: var(--text-grey-light); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
+                                Arsa büyüklüğünüzü girin; bölgenin imar emsal ve kat karşılığı oranlarına göre tahmini yeni konut hak edişinizi ve yatırım değerini anında görün.
+                            </p>
+
+                            <div style="display: flex; gap: 12px; margin-bottom: 15px;">
+                                <div style="flex: 1;">
+                                    <label style="font-size: 0.8rem; color: var(--gold-main); font-weight: 700; display: block; margin-bottom: 6px;">Arsa Alanı (m²)</label>
+                                    <input type="number" id="simLandArea" value="800" class="geo-filter-control" oninput="calculateGeoSimulation()">
+                                </div>
+                                <div style="flex: 1;">
+                                    <label style="font-size: 0.8rem; color: var(--gold-main); font-weight: 700; display: block; margin-bottom: 6px;">İmar Emsali (KAKS)</label>
+                                    <input type="number" id="simFar" value="1.80" step="0.1" class="geo-filter-control" oninput="calculateGeoSimulation()">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="calc-result-badge">
+                                <div style="font-size: 0.85rem; color: var(--text-grey-light); margin-bottom: 6px;">Toplam Arsa Malikleri Yeni İnşaat Hakkı</div>
+                                <div style="font-size: 2.2rem; font-family: var(--font-heading); font-weight: 800; color: var(--gold-main);" id="simOwnerArea">720,00 m²</div>
+                                <div style="font-size: 0.9rem; color: var(--text-grey-light); margin-top: 8px;" id="simApartmentEstimate">~6 Adet Lüks 3+1 Daire Eşdeğeri</div>
+                                <div style="font-size: 1.1rem; font-weight: 700; color: #10b981; margin-top: 10px;" id="simValuationEstimate">Tahmini Portföy Değeri: ~100.800.000 ₺</div>
+                            </div>
+
+                            <div style="display: flex; justify-content: center; gap: 12px; margin-top: 20px;">
+                                <a href="/katkarshesaplama" class="btn btn-gold btn-sm">
+                                    <i class="fa-solid fa-users"></i> Hissedarları Detaylı Hesapla <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOCALIZED FAQ SECTION -->
+                <div style="margin-bottom: 60px;">
+                    <div class="section-head text-center" style="margin-bottom: 35px;">
+                        <span class="sub-title">MERAK EDİLENLER</span>
+                        <h2 class="sec-title" id="faqSecTitle">Kadıköy Kentsel Dönüşüm & İnşaat SSS</h2>
+                    </div>
+
+                    <div id="faqContainer">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+
+                <!-- HYPER-LOCALIZED INTERNAL LINKING MATRIX -->
+                <div style="background: rgba(15, 18, 23, 0.7); border: 1px solid rgba(197, 168, 128, 0.15); border-radius: 16px; padding: 35px;">
+                    <h3 style="color: var(--text-white); font-size: 1.3rem; margin-bottom: 10px;">
+                        <i class="fa-solid fa-map-location-dot" style="color: var(--gold-main);"></i> Türkiye Geneli Diğer Hizmet Bölgelerimiz
+                    </h3>
+                    <p style="color: var(--text-grey-dark); font-size: 0.9rem; margin-bottom: 20px;">
+                        Masyu Yapı güvencesiyle Türkiye'nin seçkin lokasyonlarındaki arsa paylaşımlı ve taahhütlü inşaat sayfalarını inceleyin:
+                    </p>
+
+                    <div class="geo-links-grid" id="geoCrossLinks">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="/" class="logo">
+                    <div class="logo-icon">MY</div>
+                    <div class="logo-text">
+                        <span class="logo-title">MASYU YAPI</span>
+                        <span class="logo-subtitle">İNŞAAT</span>
+                    </div>
+                </a>
+                <p class="footer-desc">
+                    Masyu Yapı; İstanbul, Bodrum, Adana ve İzmir başta olmak üzere Türkiye'nin her noktasında estetik, fonksiyonel ve depreme tam dayanıklı lüks konut, kat karşılığı ve taahhüt projeleri üretmektedir.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4 class="footer-title">Hızlı Bağlantılar</h4>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fa-solid fa-chevron-right"></i> Ana Sayfa</a></li>
+                    <li><a href="/#hakkimizda"><i class="fa-solid fa-chevron-right"></i> Hakkımızda</a></li>
+                    <li><a href="/hizmetler"><i class="fa-solid fa-chevron-right"></i> Hizmet Birimlerimiz (14)</a></li>
+                    <li><a href="/bolge"><i class="fa-solid fa-chevron-right"></i> Bölgesel SEO Haritası</a></li>
+                    <li><a href="/katkarshesaplama"><i class="fa-solid fa-chevron-right"></i> Kat Karşılığı Hesaplama</a></li>
+                    <li><a href="/dashboard"><i class="fa-solid fa-chevron-right"></i> Yönetim Paneli</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Bölgesel Odaklar</h4>
+                <ul class="footer-links">
+                    <li><a href="/bolge?il=istanbul&ilce=kadikoy"><i class="fa-solid fa-location-dot"></i> Kadıköy Kentsel Dönüşüm</a></li>
+                    <li><a href="/bolge?il=istanbul&ilce=besiktas"><i class="fa-solid fa-location-dot"></i> Beşiktaş Lüks Rezidans</a></li>
+                    <li><a href="/bolge?il=mugla&ilce=bodrum"><i class="fa-solid fa-location-dot"></i> Bodrum Yalıkavak Malikane</a></li>
+                    <li><a href="/bolge?il=adana&ilce=saricam"><i class="fa-solid fa-location-dot"></i> Adana Sarıçam Kat Karşılığı</a></li>
+                    <li><a href="/bolge?il=izmir&ilce=cesme"><i class="fa-solid fa-location-dot"></i> Çeşme Alaçatı Taş Villa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Merkez İletişim</h4>
+                <div class="footer-contact-info">
+                    <p><i class="fa-solid fa-location-dot"></i> Büyükdere Cad. No: 195 Levent, Beşiktaş / İstanbul</p>
+                    <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+                    <p><i class="fa-solid fa-clock"></i> Pzt - Cmt: 08:30 - 19:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 Masyu Yapı San. ve Tic. A.Ş. Tüm Hakları Saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#">KVKK Aydınlatma</a>
+                    <a href="#">Çerez Politikası</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Widget -->
+    <div class="whatsapp-widget" id="whatsapp-widget">
+        <div class="whatsapp-bubble" id="whatsapp-bubble">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="whatsapp-badge">1</span>
+        </div>
+        <div class="whatsapp-chat-box" id="whatsapp-chat-box">
+            <div class="chat-header">
+                <div class="chat-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="chat-header-info">
+                    <h4>Masyu Yapı Bölge Temsilcisi</h4>
+                    <span><span class="dot-online"></span> Çevrimiçi</span>
+                </div>
+                <button class="chat-close" id="chat-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-body">
+                <div class="chat-msg received">
+                    <p id="chatMsgDynamic">Merhaba! Masyu Yapı Bölge Satış & Dönüşüm Ofisine hoş geldiniz. Arsanız veya projeniz için nasıl yardımcı olabilirim? 😊</p>
+                    <span class="msg-time">Şimdi</span>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <a href="https://wa.me/905320550945" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-send" id="chatWaAction">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp ile Bağlan
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROGRAMMATIC GEO SEO ENGINE SCRIPT -->
+    <script>
+        // ==================== GEO DATA MATRIX ====================
+        const GEO_DATABASE = {
+            cities: {
+                'adana': {
+                    name: 'Adana',
+                    lat: 37.0000, lng: 35.3213,
+                    districts: {
+                        'saricam': {
+                            name: 'Sarıçam (Yeni Stadyum & Esentepe)',
+                            neighborhoods: ['Esentepe', 'Gültepe', 'Çarkıpare', 'Beyceli', 'Yeni Stadyum Bölgesi', 'Yıldırım Beyazıt'],
+                            m2Price: 45000,
+                            shareRatio: '%35 - %40',
+                            farDefault: 1.60,
+                            soilGrade: 'ZB Zemin (Orta-Sert Kil/Kalker)',
+                            delivery: '14 - 18 Ay',
+                            description: 'Adana’nın en dinamik değer kazanan bölgesi Sarıçam’da geniş yeşil alanlı siteler, okul/üniversite aksında lüks rezidanslar ve kat karşılığı arsa geliştirmelerinde anahtar teslim müteahhitlik.'
+                        },
+                        'cukurova': {
+                            name: 'Çukurova (Güzelyalı & Barajyolu)',
+                            neighborhoods: ['Güzelyalı', 'Mahfesığmaz', 'Toros', 'Beyazevler', 'Karslılar', 'Turgut Özal Bulvarı'],
+                            m2Price: 70000,
+                            shareRatio: '%40 - %45',
+                            farDefault: 1.80,
+                            soilGrade: 'ZC / ZB Zemin (Derin Temel & Jet-Grouting)',
+                            delivery: '14 - 18 Ay',
+                            description: 'Seyhan Baraj Gölü manzaralı lüks kentsel dönüşüm kuleleri, sismik izolatörlü radye temelli depreme dayanıklı yapılar ve A+ iç mimari tasarımlar.'
+                        },
+                        'seyhan': {
+                            name: 'Seyhan (Ziyapaşa & Gazipaşa)',
+                            neighborhoods: ['Ziyapaşa', 'Gazipaşa', 'Cemalpaşa', 'Reşatbey', 'Kurtuluş', 'Gürselpaşa'],
+                            m2Price: 58000,
+                            shareRatio: '%40 - %45',
+                            farDefault: 2.00,
+                            soilGrade: 'ZC Zemin',
+                            delivery: '14 - 18 Ay',
+                            description: 'Adana’nın ticari ve sosyal kalbinde yer alan eski yapıların 6306 sayılı kanun kapsamında kat karşılığı ve kentsel dönüşümle yenilenmesi, modern ofis ve ticari plaza projeleri.'
+                        },
+                        'yuregir': {
+                            name: 'Yüreğir (Sinanpaşa & Kışla)',
+                            neighborhoods: ['Sinanpaşa', 'Kışla', 'Kazım Karabekir', 'Akıncılar', 'Köprülü'],
+                            m2Price: 38000,
+                            shareRatio: '%35 - %40',
+                            farDefault: 1.80,
+                            soilGrade: 'ZC / ZD Alüvyal Zemin (Kazıklı Temel)',
+                            delivery: '16 - 20 Ay',
+                            description: 'Büyük ölçekli kentsel dönüşüm hamleleri, nehir kenarı rekreasyonel konut siteleri ve kamu yatırımlarıyla hızla değerlenen parsellerde kat karşılığı taahhüt.'
+                        },
+                        'ceyhan': {
+                            name: 'Ceyhan (Enerji & Sanayi Aksı)',
+                            neighborhoods: ['Merkez', 'İstiklal', 'Botaş Yolu', 'Ceyhan OSB'],
+                            m2Price: 32000,
+                            shareRatio: '%30 - %35',
+                            farDefault: 1.50,
+                            soilGrade: 'ZB Zemin',
+                            delivery: '12 - 16 Ay',
+                            description: 'Enerji İhtisas Endüstri Bölgesi ve Ceyhan OSB hinterlandında fabrika, ağır çelik hangar ve lojistik depo ile toplu konut taahhütleri.'
+                        },
+                        'kozan': {
+                            name: 'Kozan',
+                            neighborhoods: ['Ağlıboğaz', 'Cumhuriyet', 'Karacaoğlan', 'Varsaklar'],
+                            m2Price: 28000,
+                            shareRatio: '%30 - %35',
+                            farDefault: 1.40,
+                            soilGrade: 'ZA / ZB Kaya-Sert Zemin',
+                            delivery: '12 - 14 Ay',
+                            description: 'Geniş aile konseptli sağlam zeminli modern konutlar, ticari dükkanlar ve kamu taahhüt projeleri.'
+                        },
+                        'karatas-yumurtalik': {
+                            name: 'Karataş & Yumurtalık (Sahil & Liman)',
+                            neighborhoods: ['Karataş Sahil', 'Yumurtalık Serbest Bölge', 'Ayas'],
+                            m2Price: 42000,
+                            shareRatio: '%35 - %40',
+                            farDefault: 0.60,
+                            soilGrade: 'ZC Kıyı Zemin',
+                            delivery: '10 - 14 Ay',
+                            description: 'Deniz manzaralı müstakil yazlık villalar, butik siteler ve serbest bölge sanayi depoları.'
+                        },
+                        'pozanti': {
+                            name: 'Pozantı (Yayla Konsepti)',
+                            neighborhoods: ['Akçatekir', 'Belemedik', 'Merkez'],
+                            m2Price: 30000,
+                            shareRatio: '%30 - %35',
+                            farDefault: 0.50,
+                            soilGrade: 'ZA Toros Kaya Zemin',
+                            delivery: '8 - 12 Ay',
+                            description: 'Toros Dağları eteklerinde çelik-ahşap hibrit yayla evleri, şömineli dağ villaları ve turizm tesisleri.'
+                        }
+                    }
+                },
+                'mersin': {
+                    name: 'Mersin',
+                    lat: 36.8121, lng: 34.6415,
+                    districts: {
+                        'yenisehir': {
+                            name: 'Yenişehir (Marina & Pozcu)',
+                            neighborhoods: ['Eğriçam', 'Güvenevler', 'Barbaros', 'Pozcu', 'Marina Sahil Aksı'],
+                            m2Price: 75000,
+                            shareRatio: '%40 - %48',
+                            farDefault: 1.80,
+                            soilGrade: 'ZB / ZC Zemin',
+                            delivery: '14 - 18 Ay',
+                            description: 'Mersin Marina çevresinde akıllı ev altyapılı ultra lüks rezidanslar, panoramik Akdeniz manzaralı kuleler ve kat karşılığı kentsel dönüşüm.'
+                        },
+                        'mezitli': {
+                            name: 'Mezitli (Viranşehir & Soli Sahil)',
+                            neighborhoods: ['Viranşehir', 'Soli Sahil', 'Akdeniz Mahallesi', 'Tece', 'Davultepe'],
+                            m2Price: 65000,
+                            shareRatio: '%40 - %45',
+                            farDefault: 1.60,
+                            soilGrade: 'ZC Sahil Bandı Zemin',
+                            delivery: '14 - 18 Ay',
+                            description: 'Soli ve Tece sahil bandında açık-kapalı havuzlu lüks tatil siteleri, yabancı yatırım standartlarına uygun rezidanslar ve arsa taahhütleri.'
+                        },
+                        'akdeniz': {
+                            name: 'Akdeniz (Liman & Serbest Bölge)',
+                            neighborhoods: ['Çamlıbel', 'Üçocak', 'Mersin Liman Aksı', 'Serbest Bölge'],
+                            m2Price: 48000,
+                            shareRatio: '%38 - %42',
+                            farDefault: 2.20,
+                            soilGrade: 'ZC / ZD Liman Zemin',
+                            delivery: '16 - 20 Ay',
+                            description: 'Mersin Uluslararası Limanı ve Serbest Bölge çevresinde ticari iş merkezleri, antrepolar, lojistik merkezler ve kentsel yenileme.'
+                        },
+                        'toroslar': {
+                            name: 'Toroslar (Şehir Hastanesi Aksı)',
+                            neighborhoods: ['Çavuşlu', 'Arpaçsakarlar', 'Halkkent', 'Korukent'],
+                            m2Price: 38000,
+                            shareRatio: '%35 - %40',
+                            farDefault: 1.60,
+                            soilGrade: 'ZB Sert Zemin',
+                            delivery: '12 - 16 Ay',
+                            description: 'Toroslar eteklerinde sağlam zeminli geniş sosyal donatılı toplu konut siteleri ve kat karşılığı arsalar.'
+                        },
+                        'erdemli': {
+                            name: 'Erdemli (Kızkalesi & Çeşmeli)',
+                            neighborhoods: ['Kızkalesi', 'Ayaş', 'Tömük', 'Çeşmeli', 'Kargıpınarı', 'Limonlu'],
+                            m2Price: 52000,
+                            shareRatio: '%35 - %42',
+                            farDefault: 1.20,
+                            soilGrade: 'ZB / ZC Zemin',
+                            delivery: '12 - 16 Ay',
+                            description: 'Akdeniz’in en gözde tatil aksında lüks aqua parklı tatil köyleri, sahil rezidansları ve kiralama getirisi yüksek projeler.'
+                        },
+                        'silifke': {
+                            name: 'Silifke & Taşucu',
+                            neighborhoods: ['Taşucu Port', 'Yeşilovacık', 'Atakent (Susanoğlu)', 'Göksu'],
+                            m2Price: 58000,
+                            shareRatio: '%35 - %40',
+                            farDefault: 1.40,
+                            soilGrade: 'ZB Zemin',
+                            delivery: '12 - 16 Ay',
+                            description: 'Taşucu Limanı ve sanayi lojistik aksında konut, otel ve endüstriyel tesis mühendisliği.'
+                        },
+                        'tarsus': {
+                            name: 'Tarsus (Çukurova Havalimanı Aksı)',
+                            neighborhoods: ['Şehitler', 'Yenice Havalimanı Aksı', 'Anıt', 'Yeşilyurt'],
+                            m2Price: 36000,
+                            shareRatio: '%35 - %40',
+                            farDefault: 1.60,
+                            soilGrade: 'ZB Zemin',
+                            delivery: '12 - 16 Ay',
+                            description: 'Uluslararası Çukurova Bölgesel Havalimanı bağlantı yollarında lojistik tesisler, OSB fabrikaları ve modern konut projeleri.'
+                        },
+                        'anamur': {
+                            name: 'Anamur',
+                            neighborhoods: ['İskele', 'Ören', 'Yeşilyurt'],
+                            m2Price: 44000,
+                            shareRatio: '%30 - %35',
+                            farDefault: 0.80,
+                            soilGrade: 'ZB Sahil Zemin',
+                            delivery: '10 - 14 Ay',
+                            description: 'Müstakil lüks sahil villaları, sera/tarımsal tesis altyapıları ve butik konutlar.'
+                        }
+                    }
+                },
+                'osmaniye': {
+                    name: 'Osmaniye',
+                    lat: 37.0746, lng: 36.2464,
+                    districts: {
+                        'osmaniye-merkez': {
+                            name: 'Osmaniye Merkez (Fakıuşağı & Raufbey)',
+                            neighborhoods: ['Fakıuşağı', 'Raufbey', 'Rahime Hatun', 'Adnan Menderes', 'Yaverpaşa'],
+                            m2Price: 38000,
+                            shareRatio: '%35 - %40',
+                            farDefault: 1.60,
+                            soilGrade: 'ZB Zemin (Orta-Sert Zemin)',
+                            delivery: '12 - 16 Ay',
+                            description: 'Korkut Ata Üniversitesi ve Masal Parkı aksında yüksek kira çarpanlı lüks rezidanslar, güvenli aile siteleri ve kat karşılığı arsa geliştirme.'
+                        },
+                        'kadirli': {
+                            name: 'Kadirli',
+                            neighborhoods: ['Cemalpaşa', 'Şehit Halis Şişman', 'Şehit Mehmet Delikuş', 'Dervişpaşa'],
+                            m2Price: 30000,
+                            shareRatio: '%30 - %35',
+                            farDefault: 1.50,
+                            soilGrade: 'ZB Zemin',
+                            delivery: '12 - 14 Ay',
+                            description: 'Kadirli’nin gelişen caddelerinde geniş balkonlu modern daireler, ticari dükkanlar ve kat karşılığı yapım sözleşmeleri.'
+                        },
+                        'duzici': {
+                            name: 'Düziçi (Haruniye)',
+                            neighborhoods: ['Kurtuluş', 'İrfanlı', 'Cumhuriyet', 'Haruniye'],
+                            m2Price: 26000,
+                            shareRatio: '%30 - %35',
+                            farDefault: 1.40,
+                            soilGrade: 'ZA / ZB Kaya Zemin',
+                            delivery: '10 - 14 Ay',
+                            description: 'Termal turizm ve temiz havalı doğa ile iç içe modern butik siteler ve müstakil evler.'
+                        },
+                        'toprakkale': {
+                            name: 'Toprakkale (Organize Sanayi Aksı)',
+                            neighborhoods: ['Osmaniye OSB', 'Kışla', 'Fatih'],
+                            m2Price: 28000,
+                            shareRatio: '%30 - %35',
+                            farDefault: 1.20,
+                            soilGrade: 'ZB Zemin',
+                            delivery: '10 - 14 Ay',
+                            description: 'Osmaniye OSB sınırında fabrika binaları, çelik antrepolar, lojistik depolar ve işçi lojmanları.'
+                        },
+                        'bahce': {
+                            name: 'Bahçe',
+                            neighborhoods: ['İstiklal', 'Karşıyaka', 'Cumhuriyet'],
+                            m2Price: 24000,
+                            shareRatio: '%28 - %32',
+                            farDefault: 1.20,
+                            soilGrade: 'ZA Sert Kaya Zemin',
+                            delivery: '10 - 12 Ay',
+                            description: 'Yenilenebilir enerji ve rüzgar santralleri bağlantı bölgelerinde sağlam zeminli dayanıklı yapılar.'
+                        },
+                        'hasanbeyli-sumbas': {
+                            name: 'Hasanbeyli & Sumbas',
+                            neighborhoods: ['Alman Pınarı Yaylası', 'Merkez'],
+                            m2Price: 22000,
+                            shareRatio: '%25 - %30',
+                            farDefault: 0.60,
+                            soilGrade: 'ZA Kaya Zemin',
+                            delivery: '8 - 12 Ay',
+                            description: 'Yayla evleri, doğa turizmi ve taş mimarili müstakil yaşam alanları.'
+                        }
+                    }
+                },
+                'hatay': {
+                    name: 'Hatay',
+                    lat: 36.2023, lng: 36.1606,
+                    districts: {
+                        'antakya': {
+                            name: 'Antakya (Sismik İzolatörlü Yeni Yaşam)',
+                            neighborhoods: ['Gülderen', 'Odabaşı', 'Saraykent', 'Ürgenpaşa', 'Akevler'],
+                            m2Price: 55000,
+                            shareRatio: '%40 - %45',
+                            farDefault: 1.50,
+                            soilGrade: 'ZA / ZB Seçilmiş Zemin (Sismik İzolatör)',
+                            delivery: '14 - 18 Ay',
+                            description: 'Deprem sonrası Hatay’ın yeniden ihyasında sismik taban izolatörlü, C40/50 yüksek dayanımlı betonarme ve çelik hibrit teknolojileriyle güvenli, modern ve tarihi dokuya saygılı konut projeleri.'
+                        },
+                        'iskenderun': {
+                            name: 'İskenderun (Sahil & Denizciler)',
+                            neighborhoods: ['Sahil Kordonu', 'Karaağaç', 'Denizciler', 'Numune', 'Çay Mahallesi'],
+                            m2Price: 68000,
+                            shareRatio: '%40 - %48',
+                            farDefault: 1.80,
+                            soilGrade: 'ZB / ZC Zemin (Fore Kazık Altyapılı)',
+                            delivery: '14 - 18 Ay',
+                            description: 'Akdeniz sahilinde çelik takviyeli lüks rezidanslar, liman ticaret merkezleri, plaza ofisleri ve kat karşılığı kentsel yenileme.'
+                        },
+                        'arsuz': {
+                            name: 'Arsuz (Karaağaç & Gözcüler Lüks Villalar)',
+                            neighborhoods: ['Karaağaç Sahil', 'Gözcüler', 'Akçalı', 'Uluçınar', 'Gülcihan'],
+                            m2Price: 85000,
+                            shareRatio: '%35 - %45',
+                            farDefault: 0.40,
+                            soilGrade: 'ZB Zemin',
+                            delivery: '10 - 14 Ay',
+                            description: 'Özel yüzme havuzlu, geniş peyzajlı, taş-çelik mimarili butik lüks malikaneler ve sahil villaları.'
+                        },
+                        'defne': {
+                            name: 'Defne (Harbiye & Çekmece)',
+                            neighborhoods: ['Harbiye', 'Çekmece', 'Sümerler', 'Dursunlu'],
+                            m2Price: 48000,
+                            shareRatio: '%38 - %42',
+                            farDefault: 1.40,
+                            soilGrade: 'ZB Zemin',
+                            delivery: '12 - 16 Ay',
+                            description: 'Doğayla iç içe, sağlam zeminli modern aile konutları ve kentsel dönüşüm projeleri.'
+                        },
+                        'dortyol-payas': {
+                            name: 'Dörtyol & Payas (Demir Çelik Sanayi Aksı)',
+                            neighborhoods: ['Payas OSB', 'Dörtyol Sahil', 'Numune Evler'],
+                            m2Price: 42000,
+                            shareRatio: '%35 - %40',
+                            farDefault: 1.60,
+                            soilGrade: 'ZB Zemin',
+                            delivery: '12 - 16 Ay',
+                            description: 'Ağır sanayi, demir-çelik fabrikaları, kreyn vinçli hangarlar ve toplu konut siteleri.'
+                        },
+                        'kirikhan-reyhanli': {
+                            name: 'Kırıkhan & Reyhanlı',
+                            neighborhoods: ['Kırıkhan Merkez', 'Reyhanlı Ticaret Aksı'],
+                            m2Price: 32000,
+                            shareRatio: '%30 - %35',
+                            farDefault: 1.40,
+                            soilGrade: 'ZB Zemin',
+                            delivery: '12 - 14 Ay',
+                            description: 'Tarımsal ticaret, lojistik depolar ve depreme dayanıklı sağlam konut projeleri.'
+                        },
+                        'samandag': {
+                            name: 'Samandağ (Titus & Sahil Aksı)',
+                            neighborhoods: ['Çevlik', 'Deniz Mahallesi', 'Mağaracık'],
+                            m2Price: 40000,
+                            shareRatio: '%30 - %35',
+                            farDefault: 0.60,
+                            soilGrade: 'ZB Kıyı Zemin',
+                            delivery: '10 - 14 Ay',
+                            description: 'Dünyanın en uzun sahillerinden Samandağ’da turizm konseptli villalar ve dayanıklı butik yapılar.'
+                        },
+                        'erzin': {
+                            name: 'Erzin (Narenciye & Termal)',
+                            neighborhoods: ['İsos Termal Bölgesi', 'Bahçelievler', 'Karamustafalı'],
+                            m2Price: 34000,
+                            shareRatio: '%30 - %35',
+                            farDefault: 1.20,
+                            soilGrade: 'ZB Zemin',
+                            delivery: '10 - 14 Ay',
+                            description: 'Termal sağlık tesisleri, narenciye paketleme tesisleri ve modern konut projeleri.'
+                        }
+                    }
+                }
+            },
+            services: {
+                'kat-karsiligi': {
+                    title: 'Kat Karşılığı Arsa Taahhüdü',
+                    h1Suffix: 'Kat Karşılığı & Arsa Payı Taahhüt Firması',
+                    descSuffix: 'arsa payı değerini maksimize eden şeffaf kat karşılığı sözleşmesi ve noter tasdikli teminat garantisiyle inşaat projeleri.'
+                },
+                'kentsel-donusum': {
+                    title: 'Kentsel Dönüşüm & Riskli Yapı Yenileme',
+                    h1Suffix: 'Kentsel Dönüşüm & Deprem Güvenlikli İnşaat',
+                    descSuffix: '6306 sayılı kanun kapsamında kira yardımı, tapu muafiyeti ve C40/50 depreme dayanıklı betonarme bina yenileme hizmeti.'
+                },
+                'luks-rezidans': {
+                    title: 'Lüks Rezidans & Konut Projeleri',
+                    h1Suffix: 'A+ Lüks Rezidans & Konut İnşaat Firması',
+                    descSuffix: 'kapalı otopark, akıllı ev otomasyonu, fitness, spa ve 24/7 güvenlik altyapılı premium yaşam alanları.'
+                },
+                'luks-villa': {
+                    title: 'Lüks Müstakil Villa & Malikane',
+                    h1Suffix: 'Lüks Müstakil Villa & Malikane İnşaatı',
+                    descSuffix: 'özel yüzme havuzlu, geniş bahçeli, taş-çelik mimarili butik müstakil malikane üretimi.'
+                },
+                'ticari-plaza': {
+                    title: 'Ticari Plaza & İş Merkezi',
+                    h1Suffix: 'Ticari Plaza, AVM & Ofis İnşaat Taahhüdü',
+                    descSuffix: 'yüksek kira getirili modern showroom, A+ ofis katları ve enerji verimli ticari yapılar.'
+                },
+                'endustriyel-fabrika': {
+                    title: 'Endüstriyel Tesis & OSB Fabrika',
+                    h1Suffix: 'OSB Fabrika & Ağır Sanayi Tesis İnşaatı',
+                    descSuffix: 'çelik konstrüksiyon, kreyn vinç hatları, trafo ve epoksi saha betonlu endüstriyel tesisler.'
+                },
+                'celik-konstruksiyon': {
+                    title: 'Çelik Konstrüksiyon Taşıyıcı Sistemler',
+                    h1Suffix: 'Ağır Çelik Konstrüksiyon Mühendisliği',
+                    descSuffix: 'geniş açıklıklı hangar, depo, statik hesaplamalı depreme dayanıklı çelik yapı taahhüdü.'
+                },
+                'saha-betonu': {
+                    title: 'Endüstriyel Zemin & Saha Betonu',
+                    h1Suffix: 'Lazer Perdahlı Helikopterli Saha Betonu',
+                    descSuffix: 'yüksek aşınma mukavemetli kuvars agregalı endüstriyel zemin kaplamaları.'
+                },
+                'guclendirme': {
+                    title: 'Deprem Güçlendirme & Restorasyon',
+                    h1Suffix: 'Bina Deprem Güçlendirme & Karbon Elyaf (FRP)',
+                    descSuffix: 'statik güçlendirme, çelik mantolama ve sismik izolatör mühendisliği.'
+                }
+            }
+        };
+
+        // State
+        let currentCityKey = 'adana';
+        let currentDistrictKey = 'saricam';
+        let currentServiceKey = 'kat-karsiligi';
+
+        // Read URL Parameters (Programmatic Routing)
+        function parseUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            const city = params.get('il')?.toLowerCase();
+            const district = params.get('ilce')?.toLowerCase();
+            const service = params.get('hizmet')?.toLowerCase();
+
+            if (city && GEO_DATABASE.cities[city]) {
+                currentCityKey = city;
+                if (district && GEO_DATABASE.cities[city].districts[district]) {
+                    currentDistrictKey = district;
+                } else {
+                    currentDistrictKey = Object.keys(GEO_DATABASE.cities[city].districts)[0];
+                }
+            }
+
+            if (service && GEO_DATABASE.services[service]) {
+                currentServiceKey = service;
+            }
+        }
+
+        // Initialize City and District Selectors
+        function populateSelectors() {
+            const citySelect = document.getElementById('filterCity');
+            citySelect.innerHTML = '';
+            for (const [key, val] of Object.entries(GEO_DATABASE.cities)) {
+                const opt = document.createElement('option');
+                opt.value = key;
+                opt.textContent = val.name;
+                if (key === currentCityKey) opt.selected = true;
+                citySelect.appendChild(opt);
+            }
+
+            populateDistricts();
+            document.getElementById('filterService').value = currentServiceKey;
+        }
+
+        function populateDistricts() {
+            const districtSelect = document.getElementById('filterDistrict');
+            districtSelect.innerHTML = '';
+            const cityData = GEO_DATABASE.cities[currentCityKey];
+            for (const [key, val] of Object.entries(cityData.districts)) {
+                const opt = document.createElement('option');
+                opt.value = key;
+                opt.textContent = val.name;
+                if (key === currentDistrictKey) opt.selected = true;
+                districtSelect.appendChild(opt);
+            }
+        }
+
+        function onCityChange() {
+            currentCityKey = document.getElementById('filterCity').value;
+            currentDistrictKey = Object.keys(GEO_DATABASE.cities[currentCityKey].districts)[0];
+            populateDistricts();
+        }
+
+        function onDistrictChange() {
+            currentDistrictKey = document.getElementById('filterDistrict').value;
+        }
+
+        function onServiceChange() {
+            currentServiceKey = document.getElementById('filterService').value;
+        }
+
+        function applyGeoFilter() {
+            onCityChangeDirect();
+            updateUrl();
+            renderGeoPage();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function onCityChangeDirect() {
+            currentCityKey = document.getElementById('filterCity').value;
+            currentDistrictKey = document.getElementById('filterDistrict').value;
+            currentServiceKey = document.getElementById('filterService').value;
+        }
+
+        function updateUrl() {
+            const newUrl = `/bolge?il=${currentCityKey}&ilce=${currentDistrictKey}&hizmet=${currentServiceKey}`;
+            window.history.pushState({ city: currentCityKey, district: currentDistrictKey, service: currentServiceKey }, '', newUrl);
+        }
+
+        // ==================== DYNAMIC SEO & CONTENT RENDERER ====================
+        function renderGeoPage() {
+            const cityData = GEO_DATABASE.cities[currentCityKey];
+            const distData = cityData.districts[currentDistrictKey];
+            const servData = GEO_DATABASE.services[currentServiceKey];
+
+            // 1. Dynamic SEO Titles & Meta
+            const pageTitle = `${distData.name} ${servData.h1Suffix} | Masyu Yapı`;
+            const pageDesc = `Masyu Yapı, ${distData.name} (${cityData.name}) genelinde ${servData.descSuffix} Ortalama rayiç ${distData.m2Price.toLocaleString('tr-TR')} ₺/m², %${distData.shareRatio} kat karşılığı imkanı.`;
+            const canonicalUrl = `https://cebrailkarainsaat.web.app/bolge?il=${currentCityKey}&ilce=${currentDistrictKey}&hizmet=${currentServiceKey}`;
+
+            document.title = pageTitle;
+            document.getElementById('seo-title').textContent = pageTitle;
+            document.getElementById('seo-description').setAttribute('content', pageDesc);
+            document.getElementById('seo-canonical').setAttribute('href', canonicalUrl);
+            document.getElementById('og-title').setAttribute('content', pageTitle);
+            document.getElementById('og-description').setAttribute('content', pageDesc);
+            document.getElementById('og-url').setAttribute('content', canonicalUrl);
+
+            // 2. Breadcrumbs
+            document.getElementById('breadcrumbCity').textContent = cityData.name;
+            document.getElementById('breadcrumbDistrict').textContent = distData.name;
+
+            // 3. Hero Texts
+            document.getElementById('tagText').textContent = `${distData.name.toUpperCase()} / ${cityData.name.toUpperCase()}`;
+            document.getElementById('geoHeroH1').innerHTML = `${distData.name} <span>${servData.h1Suffix}</span>`;
+            document.getElementById('geoHeroDesc').textContent = `${distData.description} ${servData.descSuffix.charAt(0).toUpperCase() + servData.descSuffix.slice(1)}`;
+
+            // 4. WhatsApp Button
+            const waText = encodeURIComponent(`Merhaba, ${distData.name} (${cityData.name}) bölgesindeki arsam / mülküm için ${servData.title} konusunda bilgi ve teklif almak istiyorum.`);
+            document.getElementById('geoWaHeroBtn').setAttribute('href', `https://wa.me/905320550945?text=${waText}`);
+            document.getElementById('chatWaAction').setAttribute('href', `https://wa.me/905320550945?text=${waText}`);
+            document.getElementById('chatMsgDynamic').textContent = `Merhaba! Masyu Yapı ${distData.name} Bölge Ofisine hoş geldiniz. Arsanız veya projeniz için teklif hazırlayabilirim.`;
+
+            // 5. KPI Metrics
+            document.getElementById('insightSubHeader').textContent = `${distData.name.toUpperCase()} BÖLGESEL PİYASA VE İMAR VERİLERİ`;
+            document.getElementById('insightTitle').textContent = `${distData.name} İnşaat & Gayrimenkul Analizi`;
+            document.getElementById('kpiM2Price').textContent = distData.m2Price.toLocaleString('tr-TR') + ' ₺';
+            document.getElementById('kpiM2Sub').textContent = `${cityData.name} ${distData.name} Rayiç Ortalaması`;
+            document.getElementById('kpiShareRatio').textContent = distData.shareRatio;
+            document.getElementById('kpiSoilGrade').textContent = distData.soilGrade;
+            document.getElementById('kpiDeliveryTime').textContent = distData.delivery;
+
+            // 6. Deep Dive Content
+            document.getElementById('geoContentH2').textContent = `${distData.name} Bölgesinde Neden Masyu Yapı?`;
+            const nList = distData.neighborhoods.join(', ');
+            document.getElementById('geoContentBody').innerHTML = `
+                <p><strong>${cityData.name} ili ${distData.name} ilçesi</strong>, özellikle <em>${nList}</em> mahallelerinde hem gayrimenkul yatırım değeri hem de modern kentsel yaşam standartları açısından stratejik bir konuma sahiptir.</p>
+                <p>Masyu Yapı olarak ${distData.name} sınırları içerisindeki tüm <strong>${servData.title}</strong> projelerimizde; yürürlükteki Türkiye Bina Deprem Yönetmeliği (TBDY 2018) şartnamelerine tam uyumlu C40/50 yüksek dayanımlı hazır betonarme, zemin iyileştirme sistemleri ve 1. sınıf lüks iç/dış mimari detaylar sunmaktayız.</p>
+                <p>Kat karşılığı arsa paylaşımı anlaşmalarımızda maliklerimize <strong>noter tasdikli teslim garantisi, resmi teminat mektubu ve süreç boyunca kira desteği</strong> sağlanmaktadır.</p>
+            `;
+
+            // 7. Local Simulator Setup
+            document.getElementById('calcBoxTitle').textContent = `${distData.name} Arsanızın Değerini Hesaplayın`;
+            document.getElementById('simFar').value = distData.farDefault;
+            calculateGeoSimulation();
+
+            // 8. Render Local FAQs
+            renderFaqs(cityData, distData, servData);
+
+            // 9. Render Cross Links
+            renderCrossLinks();
+
+            // 10. Inject Dynamic JSON-LD Schema
+            injectJsonLd(cityData, distData, servData, canonicalUrl);
+        }
+
+        // ==================== LOCAL SIMULATOR ====================
+        function calculateGeoSimulation() {
+            const cityData = GEO_DATABASE.cities[currentCityKey];
+            const distData = cityData.districts[currentDistrictKey];
+
+            const landArea = parseFloat(document.getElementById('simLandArea').value) || 0;
+            const far = parseFloat(document.getElementById('simFar').value) || distData.farDefault;
+            
+            // Parse share ratio average (e.g. "%50 - %55" -> 0.525)
+            const ratioMatch = distData.shareRatio.match(/\d+/g);
+            const avgRatio = ratioMatch ? (parseInt(ratioMatch[0]) + parseInt(ratioMatch[1] || ratioMatch[0])) / 200 : 0.5;
+
+            const totalBuild = landArea * far;
+            const ownerBuild = totalBuild * avgRatio;
+            const approxApartments = Math.round(ownerBuild / 120);
+            const approxValue = ownerBuild * distData.m2Price;
+
+            document.getElementById('simOwnerArea').textContent = ownerBuild.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' m²';
+            document.getElementById('simApartmentEstimate').textContent = `~${approxApartments} Adet Lüks 3+1 Daire Eşdeğeri`;
+            document.getElementById('simValuationEstimate').textContent = `Tahmini Portföy Değeri: ~${approxValue.toLocaleString('tr-TR', { maximumFractionDigits: 0 })} ₺`;
+        }
+
+        // ==================== FAQ GENERATOR ====================
+        function renderFaqs(city, district, service) {
+            const faqs = [
+                {
+                    q: `${district.name} bölgesinde kat karşılığı inşaat oranı nedir?`,
+                    a: `${district.name} genelinde kat karşılığı arsa paylaşım oranları ortalama ${district.shareRatio} aralığında belirlenmektedir. Arsanın cephesi, imar emsali ve konumuna göre malik lehine en yüksek oran Masyu Yapı tarafından taahhüt edilir.`
+                },
+                {
+                    q: `${district.name} kentsel dönüşüm projelerinde kira yardımı ve teminat veriliyor mu?`,
+                    a: `Evet. 6306 sayılı kanun kapsamında devletin sağladığı kira yardımına ek olarak, Masyu Yapı projelerinde noter onaylı sözleşme, banka teminat mektubu ve anahtar teslimine kadar kesintisiz kira desteği sunulmaktadır.`
+                },
+                {
+                    q: `${district.name} inşaat projelerinde zemin güvenliği ve deprem önlemleri nasıl sağlanıyor?`,
+                    a: `${district.name} zemin yapısına (${district.soilGrade}) uygun jeofizik ve jeoteknik zemin etütleri yapılır. Temel altında fore kazık, jet-grouting ve C40/50 yüksek dayanımlı betonarme sistemler eksiksiz uygulanır.`
+                },
+                {
+                    q: `Projenin ruhsat ve anahtar teslim süresi ne kadardır?`,
+                    a: `${district.name} projelerimizde ortalama inşaat ve ruhsat teslim süresi ${district.delivery} olup, gecikme durumunda maliklere sözleşme cezai şart tazminatı garanti edilmektedir.`
+                }
+            ];
+
+            const container = document.getElementById('faqContainer');
+            container.innerHTML = '';
+
+            faqs.forEach((f, idx) => {
+                const item = document.createElement('div');
+                item.className = 'faq-item' + (idx === 0 ? ' active' : '');
+                item.innerHTML = `
+                    <div class="faq-header" onclick="this.parentElement.classList.toggle('active')">
+                        <h4><i class="fa-solid fa-circle-question" style="color: var(--gold-main);"></i> ${f.q}</h4>
+                        <i class="fa-solid fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="faq-body">${f.a}</div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // ==================== CROSS LINKS MATRIX ====================
+        function renderCrossLinks() {
+            const container = document.getElementById('geoCrossLinks');
+            container.innerHTML = '';
+
+            for (const [cKey, city] of Object.entries(GEO_DATABASE.cities)) {
+                for (const [dKey, dist] of Object.entries(city.districts)) {
+                    if (cKey === currentCityKey && dKey === currentDistrictKey) continue;
+                    const a = document.createElement('a');
+                    a.className = 'geo-link-item';
+                    a.href = `/bolge?il=${cKey}&ilce=${dKey}&hizmet=${currentServiceKey}`;
+                    a.innerHTML = `<i class="fa-solid fa-arrow-right"></i> ${dist.name} ${GEO_DATABASE.services[currentServiceKey].title}`;
+                    container.appendChild(a);
+                }
+            }
+        }
+
+        // ==================== INJECT JSON-LD SCHEMA ====================
+        function injectJsonLd(city, district, service, url) {
+            // FAQ Schema
+            const faqSchema = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": `${district.name} bölgesinde kat karşılığı inşaat oranı nedir?`,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": `${district.name} genelinde kat karşılığı arsa paylaşım oranları ortalama ${district.shareRatio} aralığında belirlenmektedir.`
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": `${district.name} kentsel dönüşüm projelerinde kira yardımı ve teminat veriliyor mu?`,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": `Evet, Masyu Yapı projelerinde noter onaylı sözleşme, banka teminat mektubu ve anahtar teslimine kadar kira desteği sunulmaktadır.`
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": `${district.name} inşaat projelerinde zemin güvenliği nasıl sağlanıyor?`,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": `${district.soilGrade} zemin sınıfına uygun fore kazık, jet-grouting ve C40/50 yüksek dayanımlı betonarme sistemler uygulanır.`
+                        }
+                    }
+                ]
+            };
+            document.getElementById('geo-jsonld-faq').textContent = JSON.stringify(faqSchema);
+
+            // Breadcrumb Schema
+            const breadcrumbSchema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://cebrailkarainsaat.web.app" },
+                    { "@type": "ListItem", "position": 2, "name": "Bölgesel Hizmetler", "item": "https://cebrailkarainsaat.web.app/bolge" },
+                    { "@type": "ListItem", "position": 3, "name": city.name, "item": `https://cebrailkarainsaat.web.app/bolge?il=${currentCityKey}` },
+                    { "@type": "ListItem", "position": 4, "name": `${district.name} ${service.title}`, "item": url }
+                ]
+            };
+            document.getElementById('geo-jsonld-breadcrumb').textContent = JSON.stringify(breadcrumbSchema);
+        }
+
+        // Mobile Nav Trigger
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mNav = document.getElementById('mobile-nav');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    toggleBtn.classList.toggle('active');
+                    mNav.classList.toggle('active');
+                });
+            }
+
+            parseUrlParams();
+            populateSelectors();
+            renderGeoPage();
+        });
+
+        // Listen to browser forward/back buttons
+        window.addEventListener('popstate', (e) => {
+            parseUrlParams();
+            populateSelectors();
+            renderGeoPage();
+        });
+    </script>
+</body>
+</html>

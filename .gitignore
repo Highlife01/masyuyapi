@@ -1,0 +1,9 @@
+.env
+functions/.env*
+firebase-debug.log
+.firebase/
+data/
+node_modules/
+reference-cebrailkarainsaat/
+cebrailkara-ilk-insaat/
+*.zip

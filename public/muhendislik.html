@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mühendislik Standartları & Deprem Güvenliği | Masyu Yapı</title>
+    <meta name="description" content="Masyu Yapı üstün mühendislik disiplinleri, sismik taban izolatörleri, C40/50 yüksek dayanımlı beton, derin kazık zemin iyileştirme ve depreme dayanıklı yapı teknolojileri.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .page-hero {
+            padding: 160px 0 80px 0;
+            background: radial-gradient(circle at 50% 20%, rgba(197, 168, 128, 0.18) 0%, rgba(15, 18, 23, 0.96) 75%),
+                        linear-gradient(180deg, rgba(7, 9, 11, 0.92) 0%, #0f1217 100%),
+                        url('images/hero.png') center/cover no-repeat;
+            background-blend-mode: overlay;
+            border-bottom: 1px solid var(--border-gold);
+            text-align: center;
+        }
+
+        .engineering-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 35px;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .engineering-card:hover {
+            border-color: var(--gold-main);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .engineering-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 14px;
+            background: rgba(197, 168, 128, 0.15);
+            border: 1px solid var(--gold-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-main);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</span>
+                <span><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</span>
+                <span><i class="fa-solid fa-location-dot"></i> Çukurova / Adana - Levent / İstanbul</span>
+            </div>
+            <div class="top-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header scrolled">
+        <div class="container header-container">
+            <a href="/" class="logo" id="logo">
+                <div class="logo-icon">MY</div>
+                <div class="logo-text">
+                    <span class="logo-title">MASYU YAPI</span>
+                    <span class="logo-subtitle">İNŞAAT</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="/" class="nav-link">Ana Sayfa</a></li>
+                    
+                    <li class="nav-item-dropdown">
+                        <a href="/hakkimizda" class="nav-link active">Kurumsal <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="/hakkimizda" class="nav-dropdown-link"><i class="fa-solid fa-building-columns"></i> Hakkımızda & Vizyon</a>
+                            <a href="/muhendislik" class="nav-dropdown-link" style="color: var(--gold-main);"><i class="fa-solid fa-shield-halved"></i> Mühendislik & Standartlar</a>
+                            <a href="/bolge" class="nav-dropdown-link"><i class="fa-solid fa-map-location-dot"></i> Bölgesel Hizmet Ağı</a>
+                        </div>
+                    </li>
+
+                    <li><a href="/hizmetler" class="nav-link">Hizmetlerimiz</a></li>
+                    <li><a href="/projeler" class="nav-link">Projelerimiz</a></li>
+                    <li><a href="/emlak-otomotiv" class="nav-link">Emlak & Otomotiv</a></li>
+                    <li><a href="/katkarshesaplama" class="nav-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator" style="margin-right: 4px;"></i> Kat Karşılığı Hesapla</a></li>
+                    <li><a href="/iletisim" class="nav-link">İletişim</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="/iletisim" class="btn btn-gold btn-header">Teklif Al <i class="fa-solid fa-arrow-right"></i></a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menüyü Aç/Kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="/" class="mobile-link">Ana Sayfa</a></li>
+            <li><a href="/hakkimizda" class="mobile-link">Hakkımızda & Kurumsal</a></li>
+            <li><a href="/muhendislik" class="mobile-link">Mühendislik & Kalite</a></li>
+            <li><a href="/hizmetler" class="mobile-link">Hizmet Birimleri</a></li>
+            <li><a href="/projeler" class="mobile-link">Projelerimiz</a></li>
+            <li><a href="/bolge" class="mobile-link">Bölgelerimiz</a></li>
+            <li><a href="/emlak-otomotiv" class="mobile-link">Emlak & Otomotiv</a></li>
+            <li><a href="/katkarshesaplama" class="mobile-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator"></i> Kat Karşılığı Hesaplama</a></li>
+            <li><a href="/iletisim" class="mobile-link">İletişim</a></li>
+        </ul>
+        <div class="mobile-nav-contact">
+            <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+            <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+        </div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="sub-title">BİLİM, MÜHENDİSLİK & YÜKSEK TEKNOLOJİ</span>
+            <h1 style="font-size: 3.2rem; font-weight: 800; color: var(--text-white); margin-top: 10px;">
+                Sarsılmaz Güven: <span class="text-gold">Mühendislik Standartlarımız</span>
+            </h1>
+            <p style="color: var(--text-grey-light); font-size: 1.1rem; max-width: 750px; margin: 15px auto 0 auto; line-height: 1.8;">
+                Deprem kuşağında yer alan Çukurova ve Akdeniz bölgesinde sıfır hata toleransıyla çalışan statik ve zemin mekaniği mühendisliği.
+            </p>
+        </div>
+    </section>
+
+    <!-- CORE DISCIPLINES GRID -->
+    <section class="sec-padding">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                
+                <div class="engineering-card">
+                    <div class="engineering-icon"><i class="fa-solid fa-arrows-to-dot"></i></div>
+                    <h3 style="color: var(--text-white); font-size: 1.4rem; margin-bottom: 15px;">Sismik Taban İzolasyonu</h3>
+                    <p style="color: var(--text-grey-light); font-size: 0.95rem; line-height: 1.8;">
+                        Bina ile zemin arasına yerleştirilen kauçuk/kurşun çekirdekli izolatörler sayesinde deprem enerjisinin %85'e varan kısmı emilir. Deprem anında bile binanın fonksiyonları kesintisiz devam eder.
+                    </p>
+                </div>
+
+                <div class="engineering-card">
+                    <div class="engineering-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+                    <h3 style="color: var(--text-white); font-size: 1.4rem; margin-bottom: 15px;">C40 / C50 Yüksek Mukavemetli Beton</h3>
+                    <p style="color: var(--text-grey-light); font-size: 0.95rem; line-height: 1.8;">
+                        Projelerimizde standart beton yerine, kimyasal ve mekanik dayanımı test edilmiş, mikro silika ve lif takviyeli C40 ve C50 sınıfı hazır beton ve B420C nervürlü donatı çeliği kullanılmaktadır.
+                    </p>
+                </div>
+
+                <div class="engineering-card">
+                    <div class="engineering-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3 style="color: var(--text-white); font-size: 1.4rem; margin-bottom: 15px;">Derin Kazık & Jet-Grouting</h3>
+                    <p style="color: var(--text-grey-light); font-size: 0.95rem; line-height: 1.8;">
+                        Zemin sıvılaşma riskinin bulunduğu sahil ve alüvyal bölgelerde (Mersin, İskenderun, Yüreğir) 25-35 metre derinliğe inen fore kazık ve yüksek basınçlı jet-grouting enjeksiyonları uygulanır.
+                    </p>
+                </div>
+
+                <div class="engineering-card">
+                    <div class="engineering-icon"><i class="fa-solid fa-house-laptop"></i></div>
+                    <h3 style="color: var(--text-white); font-size: 1.4rem; margin-bottom: 15px;">Akıllı Bina Otomasyonu</h3>
+                    <p style="color: var(--text-grey-light); font-size: 0.95rem; line-height: 1.8;">
+                        KNX tabanlı aydınlatma, iklimlendirme, otomatik yangın ve gaz algılama, akıllı su vanası kapatma sistemleri ile güvenli ve enerji tasarruflu premium yaşam standartları.
+                    </p>
+                </div>
+
+                <div class="engineering-card">
+                    <div class="engineering-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3 style="color: var(--text-white); font-size: 1.4rem; margin-bottom: 15px;">Akustik & Termal Yalıtım</h3>
+                    <p style="color: var(--text-grey-light); font-size: 0.95rem; line-height: 1.8;">
+                        Taşyünü mantolama, konfor camlı alüminyum doğramalar ve katlar arası şap altı ses yalıtım membranları ile %50 enerji tasarrufu ve tam sessizlik.
+                    </p>
+                </div>
+
+                <div class="engineering-card">
+                    <div class="engineering-icon"><i class="fa-solid fa-file-shield"></i></div>
+                    <h3 style="color: var(--text-white); font-size: 1.4rem; margin-bottom: 15px;">Statik Analiz & Laboratuvar Denetimi</h3>
+                    <p style="color: var(--text-grey-light); font-size: 0.95rem; line-height: 1.8;">
+                        Her beton dökümünden alınan numuneler bağımsız akredite yapı denetim laboratuvarlarında 7 ve 28 günlük basınç kırılma testlerine tabi tutularak arşivlenir.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="/" class="logo">
+                    <div class="logo-icon">MY</div>
+                    <div class="logo-text">
+                        <span class="logo-title">MASYU YAPI</span>
+                        <span class="logo-subtitle">İNŞAAT</span>
+                    </div>
+                </a>
+                <p class="footer-desc">
+                    Adana, Mersin, Osmaniye ve Hatay genelinde prestijli konut, rezidans ve kentsel dönüşüm projelerinde lider müteahhitlik.
+                </p>
+            </div>
+            
+            <div class="footer-col">
+                <h4 class="footer-title">Kurumsal Sayfalar</h4>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fa-solid fa-chevron-right"></i> Ana Sayfa</a></li>
+                    <li><a href="/hakkimizda"><i class="fa-solid fa-chevron-right"></i> Hakkımızda</a></li>
+                    <li><a href="/hizmetler"><i class="fa-solid fa-chevron-right"></i> Hizmet Birimlerimiz</a></li>
+                    <li><a href="/projeler"><i class="fa-solid fa-chevron-right"></i> Projelerimiz</a></li>
+                    <li><a href="/bolge"><i class="fa-solid fa-chevron-right"></i> Bölgesel SEO Haritası</a></li>
+                    <li><a href="/emlak-otomotiv"><i class="fa-solid fa-chevron-right"></i> Emlak & Otomotiv</a></li>
+                    <li><a href="/katkarshesaplama"><i class="fa-solid fa-chevron-right"></i> Kat Karşılığı Hesaplama</a></li>
+                    <li><a href="/muhendislik"><i class="fa-solid fa-chevron-right"></i> Mühendislik & Kalite</a></li>
+                    <li><a href="/iletisim"><i class="fa-solid fa-chevron-right"></i> İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Bölge Merkez İletişim</h4>
+                <div class="footer-contact-info">
+                    <p><i class="fa-solid fa-location-dot"></i> Çukurova / Adana & Büyükdere Cad. Levent / İstanbul</p>
+                    <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 Masyu Yapı Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mNav = document.getElementById('mobile-nav');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    toggleBtn.classList.toggle('active');
+                    mNav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

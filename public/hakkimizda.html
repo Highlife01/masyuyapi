@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda & Kurumsal | Masyu Yapı</title>
+    <meta name="description" content="Masyu Yapı; 25 yılı aşkın tecrübesiyle Adana, Mersin, Osmaniye ve Hatay genelinde modern konutlar, lüks rezidanslar, kentsel dönüşüm ve kat karşılığı taahhüt projeleri üreten öncü inşaat kuruluşudur.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .page-hero {
+            padding: 160px 0 80px 0;
+            background: radial-gradient(circle at 50% 20%, rgba(197, 168, 128, 0.18) 0%, rgba(15, 18, 23, 0.96) 75%),
+                        linear-gradient(180deg, rgba(7, 9, 11, 0.92) 0%, #0f1217 100%),
+                        url('images/hero.png') center/cover no-repeat;
+            background-blend-mode: overlay;
+            border-bottom: 1px solid var(--border-gold);
+            text-align: center;
+        }
+
+        .timeline-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 30px;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .timeline-card:hover {
+            border-color: var(--gold-main);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .value-box {
+            background: rgba(19, 23, 31, 0.7);
+            border: 1px solid rgba(197, 168, 128, 0.2);
+            border-radius: 14px;
+            padding: 30px 25px;
+            text-align: center;
+            transition: var(--transition-fast);
+        }
+
+        .value-box:hover {
+            border-color: var(--gold-main);
+            background: rgba(197, 168, 128, 0.05);
+            transform: translateY(-4px);
+        }
+
+        .value-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            background: rgba(197, 168, 128, 0.15);
+            border: 1px solid var(--gold-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-main);
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</span>
+                <span><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</span>
+                <span><i class="fa-solid fa-location-dot"></i> Çukurova / Adana - Levent / İstanbul</span>
+            </div>
+            <div class="top-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header scrolled">
+        <div class="container header-container">
+            <a href="/" class="logo" id="logo">
+                <div class="logo-icon">MY</div>
+                <div class="logo-text">
+                    <span class="logo-title">MASYU YAPI</span>
+                    <span class="logo-subtitle">İNŞAAT A.Ş.</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="/" class="nav-link">Ana Sayfa</a></li>
+                    
+                    <li class="nav-item-dropdown">
+                        <a href="/hakkimizda" class="nav-link active">Kurumsal <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="/hakkimizda" class="nav-dropdown-link"><i class="fa-solid fa-building-columns"></i> Hakkımızda & Vizyon</a>
+                            <a href="/muhendislik" class="nav-dropdown-link"><i class="fa-solid fa-shield-halved"></i> Mühendislik & Standartlar</a>
+                            <a href="/bolge" class="nav-dropdown-link"><i class="fa-solid fa-map-location-dot"></i> Bölgesel Hizmet Ağı</a>
+                        </div>
+                    </li>
+
+                    <li><a href="/hizmetler" class="nav-link">Hizmetlerimiz</a></li>
+                    <li><a href="/projeler" class="nav-link">Projelerimiz</a></li>
+                    <li><a href="/emlak-otomotiv" class="nav-link">Emlak & Otomotiv</a></li>
+                    <li><a href="/katkarshesaplama" class="nav-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator" style="margin-right: 4px;"></i> Kat Karşılığı Hesapla</a></li>
+                    <li><a href="/iletisim" class="nav-link">İletişim</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="/iletisim" class="btn btn-gold btn-header">Teklif Al <i class="fa-solid fa-arrow-right"></i></a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menüyü Aç/Kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="/" class="mobile-link">Ana Sayfa</a></li>
+            <li><a href="/hakkimizda" class="mobile-link">Hakkımızda & Kurumsal</a></li>
+            <li><a href="/muhendislik" class="mobile-link">Mühendislik & Kalite</a></li>
+            <li><a href="/hizmetler" class="mobile-link">Hizmet Birimleri</a></li>
+            <li><a href="/projeler" class="mobile-link">Projelerimiz</a></li>
+            <li><a href="/bolge" class="mobile-link">Bölgelerimiz</a></li>
+            <li><a href="/emlak-otomotiv" class="mobile-link">Emlak & Otomotiv</a></li>
+            <li><a href="/katkarshesaplama" class="mobile-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator"></i> Kat Karşılığı Hesaplama</a></li>
+            <li><a href="/iletisim" class="mobile-link">İletişim</a></li>
+        </ul>
+        <div class="mobile-nav-contact">
+            <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+            <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+        </div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="sub-title">ÇEYREK ASIRLIK GÜVEN & İTİBAR</span>
+            <h1 style="font-size: 3.2rem; font-weight: 800; color: var(--text-white); margin-top: 10px;">
+                Geleceği Güvenle İnşa Eden <span class="text-gold">Kurumsal Güç</span>
+            </h1>
+            <p style="color: var(--text-grey-light); font-size: 1.1rem; max-width: 750px; margin: 15px auto 0 auto; line-height: 1.8;">
+                Masyu Yapı, Adana, Mersin, Osmaniye ve Hatay başta olmak üzere Türkiye genelinde modern mühendislik, sağlam zemin teknolojileri ve estetik mimariyi buluşturmaktadır.
+            </p>
+        </div>
+    </section>
+
+    <!-- ABOUT DETAIL SECTION -->
+    <section class="sec-padding">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;" class="about-responsive-grid">
+                <div>
+                    <span class="sub-title">BİZ KİMİZ?</span>
+                    <h2 class="section-title" style="margin-bottom: 20px;">
+                        Sağlam Temeller, <span class="text-gold">Sürdürülebilir Yaşam Alanları</span>
+                    </h2>
+                    <p style="color: var(--text-grey-light); font-size: 1rem; line-height: 1.8; margin-bottom: 20px;">
+                        Masyu Yapı, kurulduğu günden bu yana mimari mükemmeliyet, sarsılmaz deprem güvenliği ve zamanında teslimat prensipleriyle hareket etmektedir. Çukurova ve Akdeniz bölgesinin jeolojik ve sismik yapısına hakim mühendislik kadromuzla, kat karşılığı arsa taahhütlerinden mega rezidans projelerine kadar her yapıda kaliteyi en üst seviyeye taşımaktayız.
+                    </p>
+                    <p style="color: var(--text-grey-light); font-size: 1rem; line-height: 1.8; margin-bottom: 30px;">
+                        Projelerimizde yüksek dayanımlı C40/50 hazır beton, sismik taban izolatörleri, derin kazık sistemleri ve uluslararası LEED/BREEAM çevre standartlarına uygun akıllı ev otomasyonları kullanmaktayız.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div style="background: rgba(197, 168, 128, 0.08); border-left: 3px solid var(--gold-main); padding: 15px 20px; border-radius: 0 8px 8px 0;">
+                            <strong style="color: var(--gold-main); font-size: 1.8rem; display: block; font-family: var(--font-heading);">25+ Yıl</strong>
+                            <span style="color: var(--text-white); font-size: 0.9rem;">Sektörel Tecrübe & Güven</span>
+                        </div>
+                        <div style="background: rgba(197, 168, 128, 0.08); border-left: 3px solid var(--gold-main); padding: 15px 20px; border-radius: 0 8px 8px 0;">
+                            <strong style="color: var(--gold-main); font-size: 1.8rem; display: block; font-family: var(--font-heading);">150+</strong>
+                            <span style="color: var(--text-white); font-size: 0.9rem;">Tamamlanan Proje & İmalat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="images/hero.png" alt="Masyu Yapı Merkez" style="width: 100%; border-radius: 16px; border: 1px solid var(--border-gold); box-shadow: var(--shadow-luxury);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="sec-padding bg-darker" style="border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+        <div class="container">
+            <div class="section-title-center">
+                <span class="sub-title">DEĞERLERİMİZ & İLKELERİMİZ</span>
+                <h2 class="section-title">Geleceğe Yön Veren <span class="text-gold">Vizyonumuz</span></h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div class="value-box">
+                    <div class="value-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 style="color: var(--text-white); font-size: 1.3rem; margin-bottom: 12px;">Sıfır Hata & Güvenlik</h3>
+                    <p style="color: var(--text-grey-dark); font-size: 0.95rem; line-height: 1.7;">
+                        En son zemin etüt teknolojileri, fore kazık ve radye jeneral temel uygulamaları ile depreme karşı maksimum mukavemet sağlayan yapılar inşa ediyoruz.
+                    </p>
+                </div>
+
+                <div class="value-box">
+                    <div class="value-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                    <h3 style="color: var(--text-white); font-size: 1.3rem; margin-bottom: 12px;">Şeffaf Kat Karşılığı</h3>
+                    <p style="color: var(--text-grey-dark); font-size: 0.95rem; line-height: 1.7;">
+                        Arsa sahipleriyle noter tasdikli, şeffaf teknik şartnameler ve teminat güvenceli adil paylaşım modelleriyle ortak güven inşa ediyoruz.
+                    </p>
+                </div>
+
+                <div class="value-box">
+                    <div class="value-icon"><i class="fa-solid fa-gem"></i></div>
+                    <h3 style="color: var(--text-white); font-size: 1.3rem; margin-bottom: 12px;">A+ Lüks & Konfor</h3>
+                    <p style="color: var(--text-grey-dark); font-size: 0.95rem; line-height: 1.7;">
+                        Yalnızca bina değil; akıllı ev sistemleri, kapalı havuzlar, fitness merkezleri ve zengin peyzaj alanlarıyla prestijli yaşam merkezleri tasarlıyoruz.
+                    </p>
+                </div>
+
+                <div class="value-box">
+                    <div class="value-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3 style="color: var(--text-white); font-size: 1.3rem; margin-bottom: 12px;">Zamanında Teslimat</h3>
+                    <p style="color: var(--text-grey-dark); font-size: 0.95rem; line-height: 1.7;">
+                        Dijital şantiye takip ve tedarik zinciri yönetimimizle taahhüt ettiğimiz teslim tarihlerinden asla ödün vermeden projeleri hak sahiplerine teslim ediyoruz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="/" class="logo">
+                    <div class="logo-icon">MY</div>
+                    <div class="logo-text">
+                        <span class="logo-title">MASYU YAPI</span>
+                        <span class="logo-subtitle">İNŞAAT</span>
+                    </div>
+                </a>
+                <p class="footer-desc">
+                    Adana, Mersin, Osmaniye ve Hatay genelinde prestijli konut, rezidans ve kentsel dönüşüm projelerinde lider müteahhitlik.
+                </p>
+            </div>
+            
+            <div class="footer-col">
+                <h4 class="footer-title">Kurumsal Sayfalar</h4>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fa-solid fa-chevron-right"></i> Ana Sayfa</a></li>
+                    <li><a href="/hakkimizda"><i class="fa-solid fa-chevron-right"></i> Hakkımızda</a></li>
+                    <li><a href="/hizmetler"><i class="fa-solid fa-chevron-right"></i> Hizmet Birimlerimiz</a></li>
+                    <li><a href="/projeler"><i class="fa-solid fa-chevron-right"></i> Projelerimiz</a></li>
+                    <li><a href="/bolge"><i class="fa-solid fa-chevron-right"></i> Bölgesel SEO Haritası</a></li>
+                    <li><a href="/emlak-otomotiv"><i class="fa-solid fa-chevron-right"></i> Emlak & Otomotiv</a></li>
+                    <li><a href="/katkarshesaplama"><i class="fa-solid fa-chevron-right"></i> Kat Karşılığı Hesaplama</a></li>
+                    <li><a href="/muhendislik"><i class="fa-solid fa-chevron-right"></i> Mühendislik & Kalite</a></li>
+                    <li><a href="/iletisim"><i class="fa-solid fa-chevron-right"></i> İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Bölge Merkez İletişim</h4>
+                <div class="footer-contact-info">
+                    <p><i class="fa-solid fa-location-dot"></i> Çukurova / Adana & Büyükdere Cad. Levent / İstanbul</p>
+                    <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 Masyu Yapı Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mNav = document.getElementById('mobile-nav');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    toggleBtn.classList.toggle('active');
+                    mNav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

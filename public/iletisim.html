@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim & Teklif Talebi | Masyu Yapı</title>
+    <meta name="description" content="Masyu Yapı Adana, Mersin, Osmaniye, Hatay ve İstanbul merkez ofisleri iletişim bilgileri. Kat karşılığı, kentsel dönüşüm ve inşaat teklif formu.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .page-hero {
+            padding: 160px 0 80px 0;
+            background: radial-gradient(circle at 50% 20%, rgba(197, 168, 128, 0.18) 0%, rgba(15, 18, 23, 0.96) 75%),
+                        linear-gradient(180deg, rgba(7, 9, 11, 0.92) 0%, #0f1217 100%),
+                        url('images/hero.png') center/cover no-repeat;
+            background-blend-mode: overlay;
+            border-bottom: 1px solid var(--border-gold);
+            text-align: center;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 35px;
+            transition: var(--transition-smooth);
+        }
+
+        .contact-card:hover {
+            border-color: var(--gold-main);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .branch-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: rgba(197, 168, 128, 0.15);
+            border: 1px solid var(--gold-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-main);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</span>
+                <span><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</span>
+                <span><i class="fa-solid fa-location-dot"></i> Çukurova / Adana & Levent / İstanbul</span>
+            </div>
+            <div class="top-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header scrolled">
+        <div class="container header-container">
+            <a href="/" class="logo" id="logo">
+                <div class="logo-icon">MY</div>
+                <div class="logo-text">
+                    <span class="logo-title">MASYU YAPI</span>
+                    <span class="logo-subtitle">İNŞAAT</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="/" class="nav-link">Ana Sayfa</a></li>
+                    
+                    <li class="nav-item-dropdown">
+                        <a href="/hakkimizda" class="nav-link">Kurumsal <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="/hakkimizda" class="nav-dropdown-link"><i class="fa-solid fa-building-columns"></i> Hakkımızda & Vizyon</a>
+                            <a href="/muhendislik" class="nav-dropdown-link"><i class="fa-solid fa-shield-halved"></i> Mühendislik & Standartlar</a>
+                            <a href="/bolge" class="nav-dropdown-link"><i class="fa-solid fa-map-location-dot"></i> Bölgesel Hizmet Ağı</a>
+                        </div>
+                    </li>
+
+                    <li><a href="/hizmetler" class="nav-link">Hizmetlerimiz</a></li>
+                    <li><a href="/projeler" class="nav-link">Projelerimiz</a></li>
+                    <li><a href="/emlak-otomotiv" class="nav-link">Emlak & Otomotiv</a></li>
+                    <li><a href="/katkarshesaplama" class="nav-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator" style="margin-right: 4px;"></i> Kat Karşılığı Hesapla</a></li>
+                    <li><a href="/iletisim" class="nav-link active">İletişim</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="/iletisim" class="btn btn-gold btn-header">Teklif Al <i class="fa-solid fa-arrow-right"></i></a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menüyü Aç/Kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="/" class="mobile-link">Ana Sayfa</a></li>
+            <li><a href="/hakkimizda" class="mobile-link">Hakkımızda & Kurumsal</a></li>
+            <li><a href="/muhendislik" class="mobile-link">Mühendislik & Kalite</a></li>
+            <li><a href="/hizmetler" class="mobile-link">Hizmet Birimleri</a></li>
+            <li><a href="/projeler" class="mobile-link">Projelerimiz</a></li>
+            <li><a href="/bolge" class="mobile-link">Bölgelerimiz</a></li>
+            <li><a href="/emlak-otomotiv" class="mobile-link">Emlak & Otomotiv</a></li>
+            <li><a href="/katkarshesaplama" class="mobile-link" style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-calculator"></i> Kat Karşılığı Hesaplama</a></li>
+            <li><a href="/iletisim" class="mobile-link">İletişim</a></li>
+        </ul>
+        <div class="mobile-nav-contact">
+            <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+            <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+        </div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="sub-title">BİZE ULAŞIN</span>
+            <h1 style="font-size: 3.2rem; font-weight: 800; color: var(--text-white); margin-top: 10px;">
+                Projelerinizi Birlikte <span class="text-gold">Hayata Geçirelim</span>
+            </h1>
+            <p style="color: var(--text-grey-light); font-size: 1.1rem; max-width: 750px; margin: 15px auto 0 auto; line-height: 1.8;">
+                Arsanız için kat karşılığı teklif almak, kentsel dönüşüm danışmanlığı veya inşaat taahhüt projeleri için uzman mühendislik ekibimizle hemen iletişime geçin.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM & BRANCHES -->
+    <section class="sec-padding">
+        <div class="container">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; margin-bottom: 60px;" class="about-responsive-grid">
+                
+                <!-- Left: Branch Info -->
+                <div>
+                    <span class="sub-title">MERKEZ & ŞANTİYE OFİSLERİ</span>
+                    <h2 class="section-title" style="margin-bottom: 25px;">Bölgesel Ofislerimiz</h2>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <div class="contact-card">
+                            <div class="branch-icon"><i class="fa-solid fa-building-user"></i></div>
+                            <h3 style="color: var(--text-white); font-size: 1.25rem; margin-bottom: 8px;">Adana & Çukurova Bölge Merkezi</h3>
+                            <p style="color: var(--text-grey-light); font-size: 0.95rem; margin-bottom: 12px;">Turgut Özal Bulvarı No: 142 Çukurova / Adana</p>
+                            <p style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="branch-icon"><i class="fa-solid fa-landmark"></i></div>
+                            <h3 style="color: var(--text-white); font-size: 1.25rem; margin-bottom: 8px;">İstanbul Genel Müdürlük</h3>
+                            <p style="color: var(--text-grey-light); font-size: 0.95rem; margin-bottom: 12px;">Büyükdere Cad. No: 195 Levent, Beşiktaş / İstanbul</p>
+                            <p style="color: var(--gold-main); font-weight: 700;"><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Online Request Form -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: 20px; padding: 40px; box-shadow: var(--shadow-luxury);">
+                    <span class="sub-title">ÜCRETSİZ KEŞİF & EKSPERTİZ</span>
+                    <h2 style="color: var(--text-white); font-size: 1.8rem; margin-bottom: 20px;">Teklif & Danışmanlık Formu</h2>
+                    
+                    <form id="contactForm" onsubmit="event.preventDefault(); handleFormSubmit();">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label style="color: var(--text-white); font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; display: block;">Adınız Soyadınız *</label>
+                                <input type="text" id="cName" required placeholder="Adınız Soyadınız" style="width: 100%; padding: 12px 16px; background: rgba(7,9,11,0.7); border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-white);">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label style="color: var(--text-white); font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; display: block;">Telefon Numaranız *</label>
+                                <input type="tel" id="cPhone" required placeholder="05XX XXX XX XX" style="width: 100%; padding: 12px 16px; background: rgba(7,9,11,0.7); border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-white);">
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label style="color: var(--text-white); font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; display: block;">İl / Bölge *</label>
+                                <select id="cCity" style="width: 100%; padding: 12px 16px; background: rgba(7,9,11,0.7); border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-white);">
+                                    <option value="Adana">Adana</option>
+                                    <option value="Mersin">Mersin</option>
+                                    <option value="Osmaniye">Osmaniye</option>
+                                    <option value="Hatay">Hatay</option>
+                                    <option value="Diğer">Diğer</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label style="color: var(--text-white); font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; display: block;">İlgilendiğiniz Hizmet *</label>
+                                <select id="cService" style="width: 100%; padding: 12px 16px; background: rgba(7,9,11,0.7); border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-white);">
+                                    <option value="Kat Karşılığı Arsa Taahhüdü">Kat Karşılığı Arsa Taahhüdü</option>
+                                    <option value="Kentsel Dönüşüm / Bina Yenileme">Kentsel Dönüşüm / Bina Yenileme</option>
+                                    <option value="Lüks Rezidans / Konut Satın Alma">Lüks Rezidans / Konut Satın Alma</option>
+                                    <option value="Lüks Villa & Malikane Yapımı">Lüks Villa & Malikane Yapımı</option>
+                                    <option value="Arsa / Araç Takas Teklifi">Arsa / Araç Takas Teklifi</option>
+                                    <option value="Diğer Mühendislik Hizmetleri">Diğer Mühendislik Hizmetleri</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label style="color: var(--text-white); font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; display: block;">Mesajınız & Arsa/Proje Detayları</label>
+                            <textarea id="cMessage" rows="4" placeholder="Ada/parsel bilgisi, arsa metrekaresi veya projeniz hakkında detaylar..." style="width: 100%; padding: 12px 16px; background: rgba(7,9,11,0.7); border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-white); resize: vertical;"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 16px; font-size: 1rem;">
+                            <i class="fa-solid fa-paper-plane"></i> Teklif Talebini İlet
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="/" class="logo">
+                    <div class="logo-icon">MY</div>
+                    <div class="logo-text">
+                        <span class="logo-title">MASYU YAPI</span>
+                        <span class="logo-subtitle">İNŞAAT</span>
+                    </div>
+                </a>
+                <p class="footer-desc">
+                    Adana, Mersin, Osmaniye ve Hatay genelinde prestijli konut, rezidans ve kentsel dönüşüm projelerinde lider müteahhitlik.
+                </p>
+            </div>
+            
+            <div class="footer-col">
+                <h4 class="footer-title">Kurumsal Sayfalar</h4>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fa-solid fa-chevron-right"></i> Ana Sayfa</a></li>
+                    <li><a href="/hakkimizda"><i class="fa-solid fa-chevron-right"></i> Hakkımızda</a></li>
+                    <li><a href="/hizmetler"><i class="fa-solid fa-chevron-right"></i> Hizmet Birimlerimiz</a></li>
+                    <li><a href="/projeler"><i class="fa-solid fa-chevron-right"></i> Projelerimiz</a></li>
+                    <li><a href="/bolge"><i class="fa-solid fa-chevron-right"></i> Bölgesel SEO Haritası</a></li>
+                    <li><a href="/emlak-otomotiv"><i class="fa-solid fa-chevron-right"></i> Emlak & Otomotiv</a></li>
+                    <li><a href="/katkarshesaplama"><i class="fa-solid fa-chevron-right"></i> Kat Karşılığı Hesaplama</a></li>
+                    <li><a href="/muhendislik"><i class="fa-solid fa-chevron-right"></i> Mühendislik & Kalite</a></li>
+                    <li><a href="/iletisim"><i class="fa-solid fa-chevron-right"></i> İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Bölge Merkez İletişim</h4>
+                <div class="footer-contact-info">
+                    <p><i class="fa-solid fa-location-dot"></i> Çukurova / Adana & Büyükdere Cad. Levent / İstanbul</p>
+                    <p><i class="fa-solid fa-phone"></i> +90 (532) 055 09 45</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@cebrailkarainsaat.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 Masyu Yapı Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CRM Leads Engine (IndexedDB & BroadcastChannel) -->
+    <script src="crm-leads.js"></script>
+
+    <script>
+        async function handleFormSubmit() {
+            const name = document.getElementById('cName').value.trim();
+            const phone = document.getElementById('cPhone').value.trim();
+            const city = document.getElementById('cCity').value;
+            const service = document.getElementById('cService').value;
+            const msg = document.getElementById('cMessage').value.trim();
+
+            try {
+            if (window.CK_CRM) {
+                await CK_CRM.saveIncomingLead({
+                    name: name,
+                    phone: phone,
+                    city: city,
+                    service: service,
+                    message: msg
+                });
+            }
+
+            } catch(error) { alert(error.message); return; }
+            alert('Talebiniz başarıyla alındı ve Yönetim Paneline iletildi! Temsilcimiz en kısa sürede sizinle iletişime geçecektir.');
+            document.getElementById('contactForm').reset();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mNav = document.getElementById('mobile-nav');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    toggleBtn.classList.toggle('active');
+                    mNav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
