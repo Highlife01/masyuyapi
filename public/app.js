@@ -198,10 +198,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- DYNAMIC PROJECT DETAILS MODAL REGISTRY ---
     const projectDetailsRegistry = {
         'premium-towers': {
-            title: 'Kara Premium Towers',
+            title: 'Uygun Premium Towers',
             location: 'Ataşehir, İstanbul',
             image: 'images/hero.png',
-            desc: 'İstanbul finans dünyasının parlayan merkezinde yükselen Kara Premium Towers, modern mimarisi ve zengin sosyal alanlarıyla seçkin bir rezidans yaşamı sunmaktadır. 360° kesintisiz İstanbul manzaralı terası, tam kapsamlı akıllı ev sistemleri ve A Plus sosyal kulübüyle kalitenin yeni adresidir.',
+            desc: 'İstanbul finans dünyasının parlayan merkezinde yükselen Uygun Premium Towers, modern mimarisi ve zengin sosyal alanlarıyla seçkin bir rezidans yaşamı sunmaktadır. 360° kesintisiz İstanbul manzaralı terası, tam kapsamlı akıllı ev sistemleri ve A Plus sosyal kulübüyle kalitenin yeni adresidir.',
             specs: [
                 { label: 'Teslim Tarihi', value: 'Aralık 2026' },
                 { label: 'Proje Alanı', value: '120.000 m²' },
@@ -211,10 +211,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'bodrum-mansions': {
-            title: 'Kara Yalıkavak Mansions',
+            title: 'Soyupak Yalıkavak Mansions',
             location: 'Yalıkavak, Bodrum',
             image: 'images/villa.png',
-            desc: 'Yalıkavak\'ın en prestijli koylarından birinde denize sıfır olarak inşa edilen Kara Mansions, doğayla iç içe lüks yaşam arayanlar için tasarlandı. Sadece 12 seçkin aileye ev sahipliği yapacak olan projede her malikanenin kendine özel kum plajı, helikopter pisti erişimi, ısıtmalı infinity havuzu ve akıllı enerji yönetim sistemi bulunmaktadır.',
+            desc: 'Yalıkavak\'ın en prestijli koylarından birinde denize sıfır olarak inşa edilen Soyupak Mansions, doğayla iç içe lüks yaşam arayanlar için tasarlandı. Sadece 12 seçkin aileye ev sahipliği yapacak olan projede her malikanenin kendine özel kum plajı, helikopter pisti erişimi, ısıtmalı infinity havuzu ve akıllı enerji yönetim sistemi bulunmaktadır.',
             specs: [
                 { label: 'Teslim Tarihi', value: 'Haziran 2027' },
                 { label: 'Proje Alanı', value: '25.000 m²' },
@@ -224,10 +224,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'cankaya-plaza': {
-            title: 'Kara Sarıçam Plaza',
+            title: 'Yanar Sarıçam Plaza',
             location: 'Sarıçam, Adana',
             image: 'images/commercial.png',
-            desc: 'Adana iş dünyasının yeni parlayan yıldızı Sarıçam\'da, geleceğin çalışma trendlerine göre inşa edilen Kara Plaza. LEED Gold çevre sertifikasına sahip, yenilenebilir güneş enerjisi desteğiyle kendi ortak alan enerjisini üretebilen, 180 modüler ofis ve seçkin markaların yer aldığı lüks alışveriş caddesi ile şirketiniz için kusursuz prestij sağlar.',
+            desc: 'Adana iş dünyasının yeni parlayan yıldızı Sarıçam\'da, geleceğin çalışma trendlerine göre inşa edilen Yanar Plaza. LEED Gold çevre sertifikasına sahip, yenilenebilir güneş enerjisi desteğiyle kendi ortak alan enerjisini üretebilen, 180 modüler ofis ve seçkin markaların yer aldığı lüks alışveriş caddesi ile şirketiniz için kusursuz prestij sağlar.',
             specs: [
                 { label: 'Teslim Durumu', value: 'Tamamlandı (Yaşam Başladı)' },
                 { label: 'Toplam Alan', value: '85.000 m²' },
@@ -237,10 +237,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'forest-valley': {
-            title: 'Kara Forest Valley',
+            title: 'Uygun Forest Valley',
             location: 'Göktürk, İstanbul',
             image: 'images/hero.png',
-            desc: 'Belgrad Ormanları\'nın büyüleyici atmosferine komşu olan Kara Forest Valley, yatay mimari konseptinin en şık örneğidir. Geniş bahçe dubleksleri ve çatı penthouse seçenekleriyle doğanın huzurunu evinizin içine taşırken, şehrin olanaklarına sadece 10 dakika mesafede kalmanızı sağlar. Proje tamamen çevre dostu A Sınıfı yeşil malzemelerle inşa edilmektedir.',
+            desc: 'Belgrad Ormanları\'nın büyüleyici atmosferine komşu olan Uygun Forest Valley, yatay mimari konseptinin en şık örneğidir. Geniş bahçe dubleksleri ve çatı penthouse seçenekleriyle doğanın huzurunu evinizin içine taşırken, şehrin olanaklarına sadece 10 dakika mesafede kalmanızı sağlar. Proje tamamen çevre dostu A Sınıfı yeşil malzemelerle inşa edilmektedir.',
             specs: [
                 { label: 'Teslim Tarihi', value: 'Eylül 2026' },
                 { label: 'Proje Alanı', value: '45.000 m²' },
@@ -250,10 +250,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'marina-villas': {
-            title: 'Kara Marina Villas',
+            title: 'Soyupak Marina Villas',
             location: 'Alaçatı, İzmir',
             image: 'images/villa.png',
-            desc: 'Alaçatı Marina\'da yer alan Kara Marina Villas, deniz tutkunları için benzersiz bir lokasyon avantajı sunuyor. Kendine ait özel tekne iskelesine sahip olan bu 8 taş villa, Alaçatı mimari dokusunu modern, minimalist İtalyan iç tasarımıyla buluşturuyor. Özel şarap kavı, ısıtmalı havuz ve geniş terasıyla hayal ettiğiniz Ege yaşamı burada hayat buluyor.',
+            desc: 'Alaçatı Marina\'da yer alan Soyupak Marina Villas, deniz tutkunları için benzersiz bir lokasyon avantajı sunuyor. Kendine ait özel tekne iskelesine sahip olan bu 8 taş villa, Alaçatı mimari dokusunu modern, minimalist İtalyan iç tasarımıyla buluşturuyor. Özel şarap kavı, ısıtmalı havuz ve geniş terasıyla hayal ettiğiniz Ege yaşamı burada hayat buluyor.',
             specs: [
                 { label: 'Teslim Tarihi', value: 'Nisan 2027' },
                 { label: 'Proje Alanı', value: '15.000 m²' },
@@ -263,10 +263,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'sky-hub': {
-            title: 'Kara Sky Hub',
+            title: 'Yanar Sky Hub',
             location: 'Levent, İstanbul',
             image: 'images/commercial.png',
-            desc: 'İstanbul\'un kalbi Levent Büyükdere caddesinde yükselen Kara Sky Hub, 50 katlı devasa kulesiyle geleceğin çalışma hayatını şekillendiriyor. En gelişmiş HVAC havalandırma sistemleri, sismik damper sönümleme teknolojisi, helikopter pisti ve 360 derece kesintisiz panoramik gözlem terasıyla çok uluslu şirketlerin bir numaralı tercihi olmaya aday bir mühendislik harikasıdır.',
+            desc: 'İstanbul\'un kalbi Levent Büyükdere caddesinde yükselen Yanar Sky Hub, 50 katlı devasa kulesiyle geleceğin çalışma hayatını şekillendiriyor. En gelişmiş HVAC havalandırma sistemleri, sismik damper sönümleme teknolojisi, helikopter pisti ve 360 derece kesintisiz panoramik gözlem terasıyla çok uluslu şirketlerin bir numaralı tercihi olmaya aday bir mühendislik harikasıdır.',
             specs: [
                 { label: 'Teslim Durumu', value: 'Tamamlandı (Lansman Özel)' },
                 { label: 'Toplam Alan', value: '150.000 m²' },
