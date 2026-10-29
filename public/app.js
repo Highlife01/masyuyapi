@@ -224,10 +224,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'cankaya-plaza': {
-            title: 'Yanar Sarıçam Plaza',
-            location: 'Sarıçam, Adana',
+            title: 'Yanar Ümitköy Plaza',
+            location: 'Ümitköy, Ankara',
             image: 'images/commercial.png',
-            desc: 'Adana iş dünyasının yeni parlayan yıldızı Sarıçam\'da, geleceğin çalışma trendlerine göre inşa edilen Yanar Plaza. LEED Gold çevre sertifikasına sahip, yenilenebilir güneş enerjisi desteğiyle kendi ortak alan enerjisini üretebilen, 180 modüler ofis ve seçkin markaların yer aldığı lüks alışveriş caddesi ile şirketiniz için kusursuz prestij sağlar.',
+            desc: 'Ankara iş dünyasının yeni parlayan yıldızı Ümitköy\'de, geleceğin çalışma trendlerine göre inşa edilen Yanar Plaza. LEED Gold çevre sertifikasına sahip, yenilenebilir güneş enerjisi desteğiyle kendi ortak alan enerjisini üretebilen, 180 modüler ofis ve seçkin markaların yer aldığı lüks alışveriş caddesi ile şirketiniz için kusursuz prestij sağlar.',
             specs: [
                 { label: 'Teslim Durumu', value: 'Tamamlandı (Yaşam Başladı)' },
                 { label: 'Toplam Alan', value: '85.000 m²' },
