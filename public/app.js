@@ -236,46 +236,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 { label: 'Mühendislik', value: 'Sismik Koruma, Merkezi İklimlendirme (Sessiz VRF)' }
             ]
         },
-        'forest-valley': {
-            title: 'Uygun Forest Valley',
-            location: 'Göktürk, İstanbul',
-            image: 'images/hero.png',
-            desc: 'Belgrad Ormanları\'nın büyüleyici atmosferine komşu olan Uygun Forest Valley, yatay mimari konseptinin en şık örneğidir. Geniş bahçe dubleksleri ve çatı penthouse seçenekleriyle doğanın huzurunu evinizin içine taşırken, şehrin olanaklarına sadece 10 dakika mesafede kalmanızı sağlar. Proje tamamen çevre dostu A Sınıfı yeşil malzemelerle inşa edilmektedir.',
+        'arsuz-villas': {
+            title: 'Uygun Arsuz Sahil Villaları',
+            location: 'Arsuz, Hatay',
+            image: 'images/estate.png',
+            desc: 'Denize sıfır konumda, taş ve çelik mimariyle inşa edilen 16 adet butik lüks malikane. Her villa müstakil yüzme havuzu, geniş teras ve akıllı ev sistemleriyle donatılmıştır.',
             specs: [
-                { label: 'Teslim Tarihi', value: 'Eylül 2026' },
-                { label: 'Proje Alanı', value: '45.000 m²' },
-                { label: 'Konut Tipi', value: '1+1 Bahçe Dubleksi - 4+1 Çatı Penthouse' },
-                { label: 'Sosyal Alanlar', value: 'Doğal Gölet, Ekolojik Park, Yürüyüş Yolları, Bisiklet Parkuru' },
-                { label: 'Sürdürülebilirlik', value: 'Gri Su Geri Dönüşüm, Güneş Paneli, Organik Tarım Alanı' }
+                { label: 'Teslim Durumu', value: 'Tamamlandı (Teslim)' },
+                { label: 'Proje Alanı', value: '18.000 m²' },
+                { label: 'Villa Sayısı', value: '16 Adet 5+2 Özel Havuzlu Villa' },
+                { label: 'Özellikler', value: 'Denize Sıfır, Müstakil Havuz, Akıllı Ev, Özel Peyzaj' },
+                { label: 'Yapı Malzemesi', value: 'Taş-Çelik Mimari, Deprem Güvenlikli Çelik İskelet' }
             ]
-        },
-        'marina-villas': {
-            title: 'Soyupak Marina Villas',
-            location: 'Alaçatı, İzmir',
-            image: 'images/villa.png',
-            desc: 'Alaçatı Marina\'da yer alan Soyupak Marina Villas, deniz tutkunları için benzersiz bir lokasyon avantajı sunuyor. Kendine ait özel tekne iskelesine sahip olan bu 8 taş villa, Alaçatı mimari dokusunu modern, minimalist İtalyan iç tasarımıyla buluşturuyor. Özel şarap kavı, ısıtmalı havuz ve geniş terasıyla hayal ettiğiniz Ege yaşamı burada hayat buluyor.',
-            specs: [
-                { label: 'Teslim Tarihi', value: 'Nisan 2027' },
-                { label: 'Proje Alanı', value: '15.000 m²' },
-                { label: 'Villa Sayısı', value: '8 Bağımsız Malikane (4+1 & 5+1)' },
-                { label: 'Özellikler', value: 'Özel İskele, Müstakil Havuz, Akıllı Ev, Şarap Mahzeni' },
-                { label: 'Yapı Malzemesi', value: 'Doğal Alaçatı Taşı, Deprem Güvenlikli Çelik İskelet' }
-            ]
-        },
-        'sky-hub': {
-            title: 'Yanar Sky Hub',
-            location: 'Levent, İstanbul',
-            image: 'images/commercial.png',
-            desc: 'İstanbul\'un kalbi Levent Büyükdere caddesinde yükselen Yanar Sky Hub, 50 katlı devasa kulesiyle geleceğin çalışma hayatını şekillendiriyor. En gelişmiş HVAC havalandırma sistemleri, sismik damper sönümleme teknolojisi, helikopter pisti ve 360 derece kesintisiz panoramik gözlem terasıyla çok uluslu şirketlerin bir numaralı tercihi olmaya aday bir mühendislik harikasıdır.',
-            specs: [
-                { label: 'Teslim Durumu', value: 'Tamamlandı (Lansman Özel)' },
-                { label: 'Toplam Alan', value: '150.000 m²' },
-                { label: 'Yapı Konsepti', value: 'Modern A++ İş Kulesi (50 Kat)' },
-                { label: 'Özellikler', value: 'Helikopter Pisti, Executive Lounge, Kongre Merkezi' },
-                { label: 'Güvenlik', value: 'Sismik Damper Teknolojisi, Rüzgar Yükü Sönümleyiciler' }
-            ]
-        }
-    };
+        }    };
     
     const projectModal = document.getElementById('project-modal');
     const modalBackdrop = document.getElementById('modal-backdrop');
