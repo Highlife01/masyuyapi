@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Main Pages -->
   <url>
-    <loc>https://cebrailkarainsaat.web.app/</loc>
+    <loc>https://masyuinsaat.web.app/</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/hakkimizda</loc>
+    <loc>https://masyuinsaat.web.app/hakkimizda</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/projeler</loc>
+    <loc>https://masyuinsaat.web.app/projeler</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/muhendislik</loc>
+    <loc>https://masyuinsaat.web.app/muhendislik</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/iletisim</loc>
+    <loc>https://masyuinsaat.web.app/iletisim</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/hizmetler</loc>
+    <loc>https://masyuinsaat.web.app/hizmetler</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/katkarshesaplama</loc>
+    <loc>https://masyuinsaat.web.app/katkarshesaplama</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/emlak-otomotiv</loc>
+    <loc>https://masyuinsaat.web.app/emlak-otomotiv</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge</loc>
+    <loc>https://masyuinsaat.web.app/bolge</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
@@ -58,55 +58,55 @@
 
   <!-- ================= ADANA ================= -->
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=adana&amp;ilce=saricam&amp;hizmet=kat-karsiligi</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=adana&amp;ilce=saricam&amp;hizmet=kat-karsiligi</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=adana&amp;ilce=saricam&amp;hizmet=luks-rezidans</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=adana&amp;ilce=saricam&amp;hizmet=luks-rezidans</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=adana&amp;ilce=cukurova&amp;hizmet=kentsel-donusum</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=adana&amp;ilce=cukurova&amp;hizmet=kentsel-donusum</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=adana&amp;ilce=cukurova&amp;hizmet=luks-rezidans</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=adana&amp;ilce=cukurova&amp;hizmet=luks-rezidans</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=adana&amp;ilce=seyhan&amp;hizmet=ticari-plaza</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=adana&amp;ilce=seyhan&amp;hizmet=ticari-plaza</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=adana&amp;ilce=seyhan&amp;hizmet=kat-karsiligi</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=adana&amp;ilce=seyhan&amp;hizmet=kat-karsiligi</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=adana&amp;ilce=yuregir&amp;hizmet=kentsel-donusum</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=adana&amp;ilce=yuregir&amp;hizmet=kentsel-donusum</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=adana&amp;ilce=ceyhan&amp;hizmet=endustriyel-fabrika</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=adana&amp;ilce=ceyhan&amp;hizmet=endustriyel-fabrika</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=adana&amp;ilce=karatas-yumurtalik&amp;hizmet=luks-villa</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=adana&amp;ilce=karatas-yumurtalik&amp;hizmet=luks-villa</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -114,49 +114,49 @@
 
   <!-- ================= MERSİN ================= -->
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=mersin&amp;ilce=yenisehir&amp;hizmet=luks-rezidans</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=mersin&amp;ilce=yenisehir&amp;hizmet=luks-rezidans</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=mersin&amp;ilce=yenisehir&amp;hizmet=kat-karsiligi</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=mersin&amp;ilce=yenisehir&amp;hizmet=kat-karsiligi</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=mersin&amp;ilce=mezitli&amp;hizmet=kat-karsiligi</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=mersin&amp;ilce=mezitli&amp;hizmet=kat-karsiligi</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=mersin&amp;ilce=mezitli&amp;hizmet=luks-rezidans</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=mersin&amp;ilce=mezitli&amp;hizmet=luks-rezidans</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=mersin&amp;ilce=akdeniz&amp;hizmet=ticari-plaza</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=mersin&amp;ilce=akdeniz&amp;hizmet=ticari-plaza</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=mersin&amp;ilce=erdemli&amp;hizmet=luks-villa</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=mersin&amp;ilce=erdemli&amp;hizmet=luks-villa</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=mersin&amp;ilce=silifke&amp;hizmet=endustriyel-fabrika</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=mersin&amp;ilce=silifke&amp;hizmet=endustriyel-fabrika</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=mersin&amp;ilce=tarsus&amp;hizmet=celik-konstruksiyon</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=mersin&amp;ilce=tarsus&amp;hizmet=celik-konstruksiyon</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -164,31 +164,31 @@
 
   <!-- ================= OSMANİYE ================= -->
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=osmaniye&amp;ilce=osmaniye-merkez&amp;hizmet=kat-karsiligi</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=osmaniye&amp;ilce=osmaniye-merkez&amp;hizmet=kat-karsiligi</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=osmaniye&amp;ilce=osmaniye-merkez&amp;hizmet=luks-rezidans</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=osmaniye&amp;ilce=osmaniye-merkez&amp;hizmet=luks-rezidans</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=osmaniye&amp;ilce=kadirli&amp;hizmet=kat-karsiligi</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=osmaniye&amp;ilce=kadirli&amp;hizmet=kat-karsiligi</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=osmaniye&amp;ilce=toprakkale&amp;hizmet=endustriyel-fabrika</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=osmaniye&amp;ilce=toprakkale&amp;hizmet=endustriyel-fabrika</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=osmaniye&amp;ilce=duzici&amp;hizmet=luks-villa</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=osmaniye&amp;ilce=duzici&amp;hizmet=luks-villa</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -196,49 +196,49 @@
 
   <!-- ================= HATAY ================= -->
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=hatay&amp;ilce=antakya&amp;hizmet=kentsel-donusum</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=hatay&amp;ilce=antakya&amp;hizmet=kentsel-donusum</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=hatay&amp;ilce=antakya&amp;hizmet=guclendirme</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=hatay&amp;ilce=antakya&amp;hizmet=guclendirme</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=hatay&amp;ilce=iskenderun&amp;hizmet=kat-karsiligi</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=hatay&amp;ilce=iskenderun&amp;hizmet=kat-karsiligi</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=hatay&amp;ilce=iskenderun&amp;hizmet=luks-rezidans</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=hatay&amp;ilce=iskenderun&amp;hizmet=luks-rezidans</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=hatay&amp;ilce=arsuz&amp;hizmet=luks-villa</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=hatay&amp;ilce=arsuz&amp;hizmet=luks-villa</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=hatay&amp;ilce=defne&amp;hizmet=kentsel-donusum</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=hatay&amp;ilce=defne&amp;hizmet=kentsel-donusum</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=hatay&amp;ilce=dortyol-payas&amp;hizmet=endustriyel-fabrika</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=hatay&amp;ilce=dortyol-payas&amp;hizmet=endustriyel-fabrika</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://cebrailkarainsaat.web.app/bolge?il=hatay&amp;ilce=samandag&amp;hizmet=luks-villa</loc>
+    <loc>https://masyuinsaat.web.app/bolge?il=hatay&amp;ilce=samandag&amp;hizmet=luks-villa</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
