@@ -10,7 +10,7 @@ exports.masyuApi=onRequest({region:'europe-west1',maxInstances:2,memory:'256MiB'
  const send=(status,value)=>res.status(status).json(value);
  try{
   const path=req.path,method=req.method,input=req.body||{},now=Date.now();
-  const allowed=new Set(['https://masyuinsaat.web.app','https://masyuinsaat.firebaseapp.com']);
+  const allowed=new Set(['https://masyuinsaat.web.app','https://www.masyuyapi.com.tr','https://masyuyapi.com.tr','https://masyuinsaat.firebaseapp.com']);
   if(method!=='GET'&&req.headers.origin&&!allowed.has(req.headers.origin))return send(403,{error:'Geçersiz kaynak'});
   if(Buffer.byteLength(JSON.stringify(input))>16000)return send(413,{error:'Mesaj çok uzun'});
   if(path==='/api/login'&&method==='POST'){
