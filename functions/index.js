@@ -2,10 +2,13 @@ const {onRequest}=require('firebase-functions/v2/https');
 const {initializeApp}=require('firebase-admin/app');
 const {getFirestore}=require('firebase-admin/firestore');
 const {randomBytes,scryptSync,timingSafeEqual,createHash}=require('node:crypto');
+const {defineSecret}=require('firebase-functions/params');
+const mail=require('./mail');
+const MAIL_PASSWORD=defineSecret('MAIL_PASSWORD');
 initializeApp();
 const db=getFirestore('masyu'),statuses=['Yeni','Görüşülüyor','Teklif İletildi','Tamamlandı'];
 const cookie=req=>req.headers.cookie?.match(/(?:^|; )__session=([a-f0-9]{64})(?:;|$)/)?.[1];
-exports.masyuApi=onRequest({region:'europe-west1',maxInstances:2,memory:'256MiB',timeoutSeconds:30},async(req,res)=>{
+exports.masyuApi=onRequest({region:'europe-west1',maxInstances:2,memory:'512MiB',timeoutSeconds:60,secrets:[MAIL_PASSWORD]},async(req,res)=>{
  res.set('Cache-Control','private, no-store');res.set('X-Content-Type-Options','nosniff');
  const send=(status,value)=>res.status(status).json(value);
  try{
@@ -36,6 +39,9 @@ exports.masyuApi=onRequest({region:'europe-west1',maxInstances:2,memory:'256MiB'
   if(path==='/api/leads'&&method==='GET')return send(200,(await db.collection('leads').orderBy('timestamp','desc').get()).docs.map(doc=>doc.data()));
   const match=path.match(/^\/api\/leads\/([a-f0-9]{24})$/);
   if(match&&method==='PATCH'){if(!statuses.includes(input.status))return send(400,{error:'Geçersiz durum'});const ref=db.collection('leads').doc(match[1]);const old=await ref.get();if(!old.exists)return send(404,{error:'Talep bulunamadı'});await ref.update({status:input.status});return send(200,{...old.data(),status:input.status});}
-  return send(404,{error:'Bulunamadı'});
- }catch(error){console.error('Masyu API error',error.code||'unknown');return send(500,{error:'İşlem tamamlanamadı. Lütfen tekrar deneyin.'});}
+     if(path==='/api/mail/messages'&&method==='GET')return send(200,await mail.listMessages(req.query.limit));
+   const mailMatch=path.match(/^\/api\/mail\/messages\/(\d{1,10})$/);
+   if(mailMatch&&method==='GET'){const message=await mail.readMessage(mailMatch[1]);return message?send(200,message):send(404,{error:'Mesaj bulunamadı'});}
+return send(404,{error:'Bulunamadı'});
+ }catch(error){if(error.status)return send(error.status,{error:error.message});console.error('Masyu API error',error.code||'unknown');return send(500,{error:'İşlem tamamlanamadı. Lütfen tekrar deneyin.'});}
 });
